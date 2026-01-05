@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail — Lemari Pakaian 3 Pintu | Jembermeubel</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="jm-page">
+
+  <main class="container jm-wrap py-4">
+
+<!-- NAVBAR (sticky + dropdown produk) -->
+<nav class="navbar navbar-expand-lg jm-navbar jm-navbarSticky sticky-top rounded-4 px-3 px-lg-4 py-3">
+  <div class="container-fluid px-0">
+
+    <a class="navbar-brand jm-brand d-flex align-items-center gap-2" href="index.html">
+      <span class="jm-brand__dot"></span>
+      <span>Jembermeubel</span>
+    </a>
+
+    <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jmNav"
+      aria-controls="jmNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="jmNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link jm-navlink" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link jm-navlink" href="about.html">Tentang</a></li>
+
+        <!-- DROPDOWN PRODUK -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle jm-navlink"
+             href="#"
+             id="jmDropdownProduk"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Produk
+          </a>
+
+          <ul class="dropdown-menu jm-dropdown" aria-labelledby="jmDropdownProduk">
+            <li><a class="dropdown-item jm-ddItem" href="mejamakan.html">Meja Makan Jati</a></li>
+            <li><a class="dropdown-item jm-ddItem" href="kursitamu.html">Kursi Tamu</a></li>
+            <li><a class="dropdown-item jm-ddItem" href="lemaripakaian.html">Lemari Pakaian</a></li>
+            <li><a class="dropdown-item jm-ddItem" href="buffettv.html">Buffet TV</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link jm-navlink" href="blog.html">Blog</a></li>
+      </ul>
+
+      <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-3">
+        <a class="btn jm-navbtn jm-navbtn--brand rounded-pill px-3"
+           href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
+           target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+    <!-- PAGE HEAD -->
+    <header class="jm-pageHead mt-4">
+      <div class="jm-pageHead__bg" style="background:
+        linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.60) 100%),
+        url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2400&q=80')
+        center/cover no-repeat;">
+      </div>
+
+      <div class="jm-pageHead__inner text-center">
+        <h1 class="jm-pageHead__title">Detail Produk</h1>
+        <div class="jm-pageHead__crumbs">
+          <a href="index.html">Beranda</a>
+          <span class="jm-pageHead__sep">/</span>
+          <a href="index.html#produk">Produk</a>
+          <span class="jm-pageHead__sep">/</span>
+          <span>Lemari Pakaian</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- DETAIL -->
+    <section id="detail-produk" class="jm-section mt-4 mt-lg-5">
+      <div class="row g-3 g-lg-4 align-items-start">
+
+        <!-- LEFT -->
+        <div class="col-12 col-lg-8">
+
+          <!-- Gallery -->
+          <div class="jm-pdCard mb-3">
+            <div class="jm-pdGallery">
+
+              <div id="jmPdCarousel" class="carousel slide jm-pdCarousel" data-bs-ride="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80" class="d-block w-100" alt="Lemari pakaian 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1800&q=80" class="d-block w-100" alt="Lemari pakaian 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1800&q=80" class="d-block w-100" alt="Lemari pakaian 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1549497538-303791108f95?auto=format&fit=crop&w=1800&q=80" class="d-block w-100" alt="Lemari pakaian 4">
+                  </div>
+                </div>
+
+                <button class="carousel-control-prev jm-pdNav" type="button" data-bs-target="#jmPdCarousel" data-bs-slide="prev" aria-label="Sebelumnya">
+                  <span class="jm-pdNavBtn" aria-hidden="true">‹</span>
+                </button>
+                <button class="carousel-control-next jm-pdNav" type="button" data-bs-target="#jmPdCarousel" data-bs-slide="next" aria-label="Berikutnya">
+                  <span class="jm-pdNavBtn" aria-hidden="true">›</span>
+                </button>
+              </div>
+
+              <!-- Thumbs -->
+              <div class="jm-pdThumbs">
+                <button class="jm-pdThumb active" type="button" data-bs-target="#jmPdCarousel" data-bs-slide-to="0" aria-label="Thumbnail 1">
+                  <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=360&q=80" alt="">
+                </button>
+                <button class="jm-pdThumb" type="button" data-bs-target="#jmPdCarousel" data-bs-slide-to="1" aria-label="Thumbnail 2">
+                  <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=360&q=80" alt="">
+                </button>
+                <button class="jm-pdThumb" type="button" data-bs-target="#jmPdCarousel" data-bs-slide-to="2" aria-label="Thumbnail 3">
+                  <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=360&q=80" alt="">
+                </button>
+                <button class="jm-pdThumb" type="button" data-bs-target="#jmPdCarousel" data-bs-slide-to="3" aria-label="Thumbnail 4">
+                  <img src="https://images.unsplash.com/photo-1549497538-303791108f95?auto=format&fit=crop&w=360&q=80" alt="">
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Title -->
+          <div class="jm-pdCard mb-3">
+            <div class="p-3 p-lg-4">
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                <span class="jm-badge">Best Seller</span>
+                <span class="jm-badge jm-badge--soft">3 Pintu</span>
+                <span class="jm-badge jm-badge--soft">Bisa Custom</span>
+                <span class="jm-pdId">ID: #JM-LMR-003</span>
+              </div>
+
+              <h2 class="jm-pdTitle">Lemari Pakaian 3 Pintu — Muat Banyak, Rapi, dan Kokoh</h2>
+              <div class="jm-pdMeta">
+                Cocok untuk kamar minimalis sampai keluarga • Bisa tambah laci, sekat, cermin, dan rak sesuai kebutuhan
+              </div>
+
+              <div class="jm-pdPriceWrap mt-3">
+                <div class="jm-pdPrice">
+                  <div class="jm-pdPrice__main">Mulai Rp 3.200.000</div>
+                  <div class="jm-pdPrice__sub">Harga tergantung ukuran, bahan, dan finishing</div>
+                </div>
+
+                <div class="jm-pdMiniNote">
+                  <span class="jm-pdDot" aria-hidden="true"></span>
+                  <span>Estimasi produksi: <b>10–25 hari</b></span>
+                </div>
+              </div>
+
+              <!-- Quick tiles -->
+              <div class="jm-pdTiles mt-3">
+                <div class="jm-pdTile">
+                  <div class="jm-pdTile__num">3</div>
+                  <div class="jm-pdTile__label">Pintu</div>
+                </div>
+                <div class="jm-pdTile">
+                  <div class="jm-pdTile__num">Laci</div>
+                  <div class="jm-pdTile__label">Opsional</div>
+                </div>
+                <div class="jm-pdTile">
+                  <div class="jm-pdTile__num">Rak</div>
+                  <div class="jm-pdTile__label">Bisa banyak</div>
+                </div>
+                <div class="jm-pdTile">
+                  <div class="jm-pdTile__num">Custom</div>
+                  <div class="jm-pdTile__label">Sekat/Ukuran</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deskripsi -->
+          <div class="jm-pdCard mb-3">
+            <div class="p-3 p-lg-4">
+              <h3 class="jm-pdSectionTitle">Deskripsi Produk</h3>
+              <p class="jm-pdText">
+                Lemari pakaian 3 pintu ini didesain untuk penyimpanan maksimal tanpa terlihat “penuh”.
+                Struktur rangka kokoh, pintu presisi, dan finishing halus. Kamu bisa request pembagian ruang:
+                gantungan panjang, gantungan pendek, rak lipat, hingga kompartemen khusus bed cover.
+              </p>
+
+              <div class="row g-3 mt-1">
+                <div class="col-12 col-md-6">
+                  <div class="jm-pdBox">
+                    <div class="jm-pdBox__title">Kelebihan Utama</div>
+                    <ul class="jm-pdList">
+                      <li>Ruang simpan lega (baju gantung + lipat)</li>
+                      <li>Pintu rapat & sejajar, terlihat rapi</li>
+                      <li>Opsi tambah laci & rak sepatu</li>
+                      <li>Handle & model pintu bisa request</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="jm-pdBox">
+                    <div class="jm-pdBox__title">Material & Finishing</div>
+                    <ul class="jm-pdList">
+                      <li>Kayu: jati / mahoni / mindi (sesuai budget)</li>
+                      <li>Finishing: natural, walnut, duco</li>
+                      <li>Opsi pintu: polos / kombinasi kaca / cermin</li>
+                      <li>Anti gores & mudah dibersihkan</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="jm-pdDivider"></div>
+
+              <h3 class="jm-pdSectionTitle">Spesifikasi Singkat</h3>
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <div class="jm-pdSpecLine">
+                    <span class="jm-pdSpecKey">Pintu</span>
+                    <span class="jm-pdSpecVal">3 pintu (bisa 2/4)</span>
+                  </div>
+                  <div class="jm-pdSpecLine">
+                    <span class="jm-pdSpecKey">Ukuran default</span>
+                    <span class="jm-pdSpecVal">180×55×200 cm</span>
+                  </div>
+                  <div class="jm-pdSpecLine">
+                    <span class="jm-pdSpecKey">Sekat</span>
+                    <span class="jm-pdSpecVal">Custom (rak/gantungan)</span>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="jm-pdSpecLine">
+                    <span class="jm-pdSpecKey">Finishing</span>
+                    <span class="jm-pdSpecVal">Natural/Walnut/Duco</span>
+                  </div>
+                  <div class="jm-pdSpecLine">
+                    <span class="jm-pdSpecKey">Produksi</span>
+                    <span class="jm-pdSpecVal">10–25 hari</span>
+                  </div>
+                  <div class="jm-pdSpecLine">
+                    <span class="jm-pdSpecKey">Pengiriman</span>
+                    <span class="jm-pdSpecVal">Packing aman + kirim</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- “Floor Plan” versi lemari: layout isi -->
+          <div class="jm-pdCard mb-3">
+            <div class="p-3 p-lg-4">
+              <h3 class="jm-pdSectionTitle">Layout Lemari (Contoh Pembagian)</h3>
+
+              <div class="jm-pdPlan">
+                <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1800&q=80"
+                     alt="Contoh layout lemari" loading="lazy">
+              </div>
+
+              <div class="jm-pdPlanCap">
+                <b>Tips:</b> Kirim ukuran dinding & posisi stop kontak/saklar biar ukuran lemari presisi.
+                Bisa request: 1 sisi gantungan panjang + 1 sisi rak lipat + 2–4 laci.
+              </div>
+            </div>
+          </div>
+
+          <!-- Detail strip -->
+          <div class="jm-pdCard">
+            <div class="p-3 p-lg-4">
+              <h3 class="jm-pdSectionTitle mb-3">Detail Produk</h3>
+
+              <div class="jm-pdFacts">
+                <div class="jm-pdFact">
+                  <div class="jm-pdFact__icon">🚪</div>
+                  <div class="jm-pdFact__txt">
+                    <div class="jm-pdFact__k">Pintu</div>
+                    <div class="jm-pdFact__v">3 pintu</div>
+                  </div>
+                </div>
+
+                <div class="jm-pdFact">
+                  <div class="jm-pdFact__icon">🧺</div>
+                  <div class="jm-pdFact__txt">
+                    <div class="jm-pdFact__k">Laci</div>
+                    <div class="jm-pdFact__v">Opsional</div>
+                  </div>
+                </div>
+
+                <div class="jm-pdFact">
+                  <div class="jm-pdFact__icon">🪵</div>
+                  <div class="jm-pdFact__txt">
+                    <div class="jm-pdFact__k">Kayu</div>
+                    <div class="jm-pdFact__v">Pilihan</div>
+                  </div>
+                </div>
+
+                <div class="jm-pdFact">
+                  <div class="jm-pdFact__icon">🎨</div>
+                  <div class="jm-pdFact__txt">
+                    <div class="jm-pdFact__k">Finishing</div>
+                    <div class="jm-pdFact__v">Custom</div>
+                  </div>
+                </div>
+
+                <div class="jm-pdFact">
+                  <div class="jm-pdFact__icon">📐</div>
+                  <div class="jm-pdFact__txt">
+                    <div class="jm-pdFact__k">Ukuran</div>
+                    <div class="jm-pdFact__v">Bisa request</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <a class="btn jm-btn jm-btn--outline rounded-pill px-4 py-2" href="index.html#cara-pesan">Lihat Cara Pesan</a>
+                <a class="btn jm-btn jm-btn--soft rounded-pill px-4 py-2" href="index.html#galeri">Lihat Galeri</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-12 col-lg-4">
+          <div class="jm-pdSide sticky-top jm-pdSideSticky">
+
+            <div class="jm-sideCard mb-3">
+              <div class="jm-sideTitle">Jadwal Konsultasi</div>
+
+              <div class="row g-2 mt-1">
+                <div class="col-6">
+                  <input type="date" class="form-control jm-input" id="jmSchedDate">
+                </div>
+                <div class="col-6">
+                  <input type="time" class="form-control jm-input" id="jmSchedTime">
+                </div>
+              </div>
+
+              <button class="btn jm-btn jm-btn--brand w-100 rounded-pill py-2 mt-3" id="jmBookBtn" type="button">
+                Book Konsultasi
+              </button>
+            </div>
+
+            <div class="jm-sideCard mb-3">
+              <div class="d-flex gap-2">
+                <button class="btn jm-btn jm-btn--soft rounded-pill flex-fill py-2" id="jmSaveBtn" type="button">☆ Save</button>
+                <button class="btn jm-btn jm-btn--soft rounded-pill flex-fill py-2" id="jmShareBtn" type="button">⤴ Share</button>
+              </div>
+            </div>
+
+            <div class="jm-sideCard mb-3">
+              <div class="jm-agent">
+                <img class="jm-agent__img" src="https://i.pravatar.cc/96?img=12" alt="Admin Jembermeubel">
+                <div class="jm-agent__meta">
+                  <div class="jm-agent__name">Admin Jembermeubel</div>
+                  <div class="jm-agent__role">Customer Service</div>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2 mt-3">
+                <a class="btn jm-btn jm-btn--brand rounded-pill py-2" href="tel:+62XXXXXXXXXXX">📞 Call Now</a>
+                <a class="btn jm-btn jm-btn--outline rounded-pill py-2"
+                   href="https://wa.me/62XXXXXXXXXXX?text=Halo%20Jembermeubel,%20saya%20mau%20tanya%20Lemari%20Pakaian%203%20Pintu."
+                   target="_blank" rel="noopener">💬 Message</a>
+              </div>
+            </div>
+
+            <div class="jm-sideCard mb-3">
+              <div class="jm-sideTitle">Tanya / Order Cepat</div>
+
+              <form id="jmPdContactForm" class="mt-2" novalidate>
+                <input type="hidden" id="jmProductName" value="Lemari Pakaian 3 Pintu">
+
+                <div class="mb-2">
+                  <input class="form-control jm-input" id="jmNama" placeholder="Nama kamu" required>
+                </div>
+                <div class="mb-2">
+                  <input class="form-control jm-input" id="jmKota" placeholder="Kota tujuan" required>
+                </div>
+
+                <div class="mb-2">
+                  <select class="form-select jm-input" id="jmVarian" required>
+                    <option value="3 Pintu (Standar)" selected>3 Pintu (Standar)</option>
+                    <option value="3 Pintu + Laci">3 Pintu + Laci</option>
+                    <option value="3 Pintu + Cermin">3 Pintu + Cermin</option>
+                    <option value="Custom sekat & ukuran">Custom sekat & ukuran</option>
+                  </select>
+                </div>
+
+                <div class="mb-2">
+                  <textarea class="form-control jm-input" id="jmMsg" rows="4" placeholder="Pesan (opsional): ukuran, bahan, finishing, sekat, dll"></textarea>
+                </div>
+
+                <button class="btn jm-btn jm-btn--brand w-100 rounded-pill py-2" type="submit">
+                  Send Request
+                </button>
+
+                <div class="jm-miniToast" id="jmPdToast" aria-live="polite" aria-atomic="true">
+                  Mohon isi Nama & Kota dulu ya 🙂
+                </div>
+              </form>
+            </div>
+
+            <div class="jm-sideCard mb-3">
+              <div class="jm-sideTitle">Estimasi Biaya</div>
+
+              <div class="jm-costRow mt-2">
+                <span>Harga produk</span>
+                <input type="number" class="form-control jm-input jm-costInput" id="jmCostBase" value="3200000" min="0">
+              </div>
+              <div class="jm-costRow">
+                <span>Upgrade (laci/cermin)</span>
+                <input type="number" class="form-control jm-input jm-costInput" id="jmCostFinish" value="0" min="0">
+              </div>
+              <div class="jm-costRow">
+                <span>Ongkir estimasi</span>
+                <input type="number" class="form-control jm-input jm-costInput" id="jmCostShip" value="0" min="0">
+              </div>
+
+              <div class="jm-costTotal mt-2">
+                <span>Total</span>
+                <span id="jmCostTotal">Rp 3.200.000</span>
+              </div>
+
+              <div class="jm-costHint mt-2">
+                Estimasi saja. Total final tergantung ukuran, sekat, bahan, finishing, dan tujuan kirim.
+              </div>
+            </div>
+
+            <div class="jm-sideCard">
+              <div class="jm-sideTitle">Produk Serupa</div>
+
+              <a class="jm-simItem" href="mejamakan.html">
+                <img src="https://images.unsplash.com/photo-1549497538-303791108f95?auto=format&fit=crop&w=240&q=80" alt="">
+                <div>
+                  <div class="jm-simTitle">Meja Makan Jati</div>
+                  <div class="jm-simMeta">Mulai Rp 3.900.000</div>
+                </div>
+              </a>
+
+              <a class="jm-simItem" href="kursitamu.html">
+                <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=240&q=80" alt="">
+                <div>
+                  <div class="jm-simTitle">Kursi Tamu Minimalis</div>
+                  <div class="jm-simMeta">Mulai Rp 2.500.000</div>
+                </div>
+              </a>
+
+              <a class="jm-simItem" href="buffettv.html">
+                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=240&q=80" alt="">
+                <div>
+                  <div class="jm-simTitle">Buffet TV Minimalis</div>
+                  <div class="jm-simMeta">Mulai Rp X • Custom</div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS: thumbs active + WA + cost calc + save/share + booking -->
+  <script>
+    (function(){
+      const WA_NUMBER = "62895369969300"; // ganti nomor WA kamu (tanpa +)
+      const toast = document.getElementById("jmPdToast");
+
+      // thumbs active sync
+      const thumbs = Array.from(document.querySelectorAll(".jm-pdThumb"));
+      const carouselEl = document.getElementById("jmPdCarousel");
+      bootstrap.Carousel.getOrCreateInstance(carouselEl, { interval: false, ride: false });
+
+      function setThumbActive(idx){
+        thumbs.forEach((b,i)=> b.classList.toggle("active", i === idx));
+      }
+      carouselEl.addEventListener("slid.bs.carousel", (e) => setThumbActive(e.to));
+      thumbs.forEach((btn, idx) => btn.addEventListener("click", () => setThumbActive(idx)));
+
+      function showToast(msg){
+        toast.textContent = msg;
+        toast.classList.add("is-show");
+        clearTimeout(showToast._t);
+        showToast._t = setTimeout(() => toast.classList.remove("is-show"), 2400);
+      }
+
+      // contact form => WhatsApp
+      const form = document.getElementById("jmPdContactForm");
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const product = document.getElementById("jmProductName").value.trim();
+        const nama = document.getElementById("jmNama").value.trim();
+        const kota = document.getElementById("jmKota").value.trim();
+        const varian = document.getElementById("jmVarian").value.trim();
+        const msg = document.getElementById("jmMsg").value.trim();
+
+        if(!nama || !kota){
+          showToast("Mohon isi Nama & Kota dulu ya 🙂");
+          return;
+        }
+
+        const lines = [
+          "Halo Jembermeubel, saya mau tanya / order:",
+          "",
+          "Produk: " + product,
+          "Nama: " + nama,
+          "Kota: " + kota,
+          "Varian: " + varian,
+        ];
+        if(msg) lines.push("Pesan: " + msg);
+        lines.push("", "Terima kasih 🙏");
+
+        const url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+        window.open(url, "_blank", "noopener");
+      });
+
+      // booking
+      const bookBtn = document.getElementById("jmBookBtn");
+      bookBtn.addEventListener("click", function(){
+        const d = document.getElementById("jmSchedDate").value;
+        const t = document.getElementById("jmSchedTime").value;
+
+        const when = (d || t) ? ("Jadwal: " + (d || "—") + " " + (t || "")) : "Jadwal: (belum ditentukan)";
+        const lines = [
+          "Halo Jembermeubel, saya mau booking konsultasi untuk Lemari Pakaian 3 Pintu.",
+          when,
+          "",
+          "Mohon info ukuran & opsi sekat ya. Terima kasih 🙏"
+        ];
+        const url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+        window.open(url, "_blank", "noopener");
+      });
+
+      // cost calculator
+      function formatRupiah(n){
+        n = Number(n || 0);
+        return "Rp " + n.toLocaleString("id-ID");
+      }
+      const base = document.getElementById("jmCostBase");
+      const fin  = document.getElementById("jmCostFinish");
+      const ship = document.getElementById("jmCostShip");
+      const totalEl = document.getElementById("jmCostTotal");
+
+      function calc(){
+        const total = (Number(base.value||0) + Number(fin.value||0) + Number(ship.value||0));
+        totalEl.textContent = formatRupiah(total);
+      }
+      [base, fin, ship].forEach(el => el.addEventListener("input", calc));
+      calc();
+
+      // save/share
+      const saveBtn = document.getElementById("jmSaveBtn");
+      saveBtn.addEventListener("click", function(){
+        const saved = saveBtn.classList.toggle("is-saved");
+        saveBtn.textContent = saved ? "★ Saved" : "☆ Save";
+      });
+
+      const shareBtn = document.getElementById("jmShareBtn");
+      shareBtn.addEventListener("click", async function(){
+        const url = window.location.href;
+        try{
+          if(navigator.share){
+            await navigator.share({ title: document.title, url });
+          }else{
+            await navigator.clipboard.writeText(url);
+            shareBtn.textContent = "✓ Copied";
+            setTimeout(()=> shareBtn.textContent = "⤴ Share", 1200);
+          }
+        }catch(e){}
+      });
+    })();
+  </script>
+
+  <!-- FOOTER -->
+<footer class="jm-footer mt-4 mt-lg-5">
+  <div class="container jm-wrap">
+
+    <div class="jm-footerCard">
+      <div class="row g-4 align-items-start">
+
+        <!-- BRAND + DESC -->
+        <div class="col-12 col-lg-4">
+          <a class="jm-footerBrand d-inline-flex align-items-center gap-2" href="index.html">
+            <span class="jm-brand__dot"></span>
+            <span class="jm-footerBrand__text">Jembermeubel</span>
+          </a>
+
+          <p class="jm-footerDesc mt-2">
+            Furniture kayu rapi & kokoh. Melayani ready stock dan custom ukuran/desain untuk rumah, kantor, atau usaha.
+          </p>
+
+          <div class="jm-footerActions d-flex flex-wrap gap-2 mt-3">
+            <a class="btn jm-btn jm-btn--brand rounded-pill px-4 py-2"
+               href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
+               target="_blank" rel="noopener">
+              Konsultasi WhatsApp
+            </a>
+            <a class="btn jm-btn jm-btn--soft rounded-pill px-4 py-2" href="index.html#galeri">
+              Lihat Galeri
+            </a>
+          </div>
+        </div>
+
+        <!-- LINKS -->
+        <div class="col-12 col-lg-8">
+          <div class="row g-4">
+
+            <!-- MENU -->
+            <div class="col-6 col-md-4">
+              <div class="jm-footerTitle">Menu</div>
+              <ul class="jm-footerList">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="index.html#faq">Blog</a></li>
+              </ul>
+            </div>
+
+            <!-- PRODUK -->
+            <div class="col-6 col-md-4">
+              <div class="jm-footerTitle">Produk</div>
+              <ul class="jm-footerList">
+                <li><a href="mejamakan.html">Meja Makan Jati</a></li>
+                <li><a href="kursitamu.html">Kursi Tamu</a></li>
+                <li><a href="lemaripakaian.html">Lemari Pakaian</a></li>
+                <li><a href="buffettv.html">Buffet TV</a></li>
+              </ul>
+            </div>
+
+            <!-- KONTAK -->
+            <div class="col-12 col-md-4">
+              <div class="jm-footerTitle">Kontak</div>
+
+              <div class="jm-footerContact">
+                <div class="jm-footerContact__item">
+                  <span class="jm-footerContact__dot" aria-hidden="true"></span>
+                  <span>Jam respons: <b>09.00–21.00 WIB</b></span>
+                </div>
+                <div class="jm-footerContact__item">
+                  <span class="jm-footerContact__dot" aria-hidden="true"></span>
+                  <span>Pengiriman: <b>Seluruh Indonesia</b></span>
+                </div>
+                <div class="jm-footerContact__item">
+                  <span class="jm-footerContact__dot" aria-hidden="true"></span>
+                  <a href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
+                     target="_blank" rel="noopener">
+                    WhatsApp: <b>+62 895-3696-9300</b>
+                  </a>
+                </div>
+              </div>
+
+              <div class="jm-footerMiniNote mt-3">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="jm-footerBottom mt-4">
+        <div class="jm-footerCopy">
+          © <span id="jmYear"></span> Jembermeubel. All rights reserved.
+        </div>
+
+        <div class="jm-footerBottomLinks">
+          <a href="about.html">Tentang</a>
+          <span class="jm-footerSep">•</span>
+          <a href="index.html#cara-pesan">Cara Pesan</a>
+          <span class="jm-footerSep">•</span>
+          <a href="index.html#cta">Kontak</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Tahun otomatis
+  document.getElementById("jmYear").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

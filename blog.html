@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog • Jembermeubel</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="jm-page">
+
+  <main class="container jm-wrap py-4">
+
+    <!-- NAVBAR (samakan seperti index) -->
+    <nav class="navbar navbar-expand-lg jm-navbar jm-navbarSticky sticky-top rounded-4 px-3 px-lg-4 py-3">
+      <div class="container-fluid px-0">
+
+        <a class="navbar-brand jm-brand d-flex align-items-center gap-2" href="index.html">
+          <span class="jm-brand__dot"></span>
+          <span>Jembermeubel</span>
+        </a>
+
+        <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jmNav"
+          aria-controls="jmNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="jmNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link jm-navlink" href="index.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link jm-navlink" href="about.html">Tentang</a></li>
+
+            <!-- DROPDOWN PRODUK -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle jm-navlink"
+                 href="#"
+                 id="jmDropdownProduk"
+                 role="button"
+                 data-bs-toggle="dropdown"
+                 aria-expanded="false">
+                Produk
+              </a>
+
+              <ul class="dropdown-menu jm-dropdown" aria-labelledby="jmDropdownProduk">
+                <li><a class="dropdown-item jm-ddItem" href="mejamakan.html">Meja Makan Jati</a></li>
+                <li><a class="dropdown-item jm-ddItem" href="kursitamu.html">Kursi Tamu</a></li>
+                <li><a class="dropdown-item jm-ddItem" href="lemaripakaian.html">Lemari Pakaian</a></li>
+                <li><a class="dropdown-item jm-ddItem" href="buffettv.html">Buffet TV</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link jm-navlink active" href="blog.html">Blog</a></li>
+          </ul>
+
+          <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-3">
+            <a class="btn jm-navbtn jm-navbtn--brand rounded-pill px-3"
+               href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
+               target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- PAGE HEAD (mirip breadcrumb di contoh) -->
+    <section class="jm-blogHead mt-4">
+      <div class="jm-blogHead__inner">
+        <div class="jm-blogHead__left">
+          <h1 class="jm-blogHead__title">Blog</h1>
+        </div>
+        <div class="jm-blogHead__right">
+          <div class="jm-blogHead__crumbs">
+            <a href="index.html">Home</a>
+            <span class="jm-blogHead__sep">/</span>
+            <span>Blog</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section id="blog" class="jm-section mt-4 mt-lg-5">
+      <div class="row g-4 align-items-start">
+
+        <!-- LEFT: POSTS -->
+        <div class="col-12 col-lg-8">
+
+          <!-- HERO POST -->
+          <article class="jm-postHero">
+            <a class="jm-postHero__media" href="blog-detail.html">
+              <img
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1800&q=80"
+                alt="Tips memilih sofa kayu untuk ruang tamu"
+                loading="lazy">
+              <span class="jm-chip jm-chip--cat">Tips</span>
+            </a>
+
+            <div class="jm-postHero__body">
+              <div class="jm-postHero__meta">
+                <span class="jm-metaItem">Ruang Tamu</span>
+                <span class="jm-metaSep">•</span>
+                <span class="jm-metaItem">Jan 2026</span>
+              </div>
+
+              <h2 class="jm-postHero__title">
+                <a href="blog-detail.html">Cara Memilih Kursi Tamu Kayu yang Nyaman & Tahan Lama</a>
+              </h2>
+
+              <p class="jm-postHero__excerpt">
+                Panduan singkat memilih rangka, busa/anyaman, dan finishing yang cocok untuk rumah minimalis maupun klasik.
+                Plus checklist ukuran agar pas di ruang tamu.
+              </p>
+
+              <div class="jm-postHero__author">
+                <span class="jm-authorDot" aria-hidden="true"></span>
+                <span>Tim Jembermeubel</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 posts row (mirip baris 2 pada contoh) -->
+          <div class="row g-4 mt-1">
+
+            <div class="col-12 col-md-6">
+              <article class="jm-postMini">
+                <a class="jm-postMini__media" href="blog-detail.html">
+                  <img
+                    src="https://images.unsplash.com/photo-1549497538-303791108f95?auto=format&fit=crop&w=1400&q=80"
+                    alt="Perawatan meja makan jati"
+                    loading="lazy">
+                  <span class="jm-chip jm-chip--cat">Perawatan</span>
+                </a>
+
+                <div class="jm-postMini__body">
+                  <div class="jm-postMini__meta">
+                    <span class="jm-metaItem">Ruang Makan</span>
+                    <span class="jm-metaSep">•</span>
+                    <span class="jm-metaItem">Jan 2026</span>
+                  </div>
+
+                  <h3 class="jm-postMini__title">
+                    <a href="blog-detail.html">Perawatan Meja Makan Jati Supaya Finishing Awet</a>
+                  </h3>
+
+                  <div class="jm-postMini__author">
+                    <span class="jm-authorDot" aria-hidden="true"></span>
+                    <span>Workshop</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="jm-postMini">
+                <a class="jm-postMini__media" href="blog-detail.html">
+                  <img
+                    src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=80"
+                    alt="Ukuran ideal buffet tv"
+                    loading="lazy">
+                  <span class="jm-chip jm-chip--cat">Ukuran</span>
+                </a>
+
+                <div class="jm-postMini__body">
+                  <div class="jm-postMini__meta">
+                    <span class="jm-metaItem">Ruang Keluarga</span>
+                    <span class="jm-metaSep">•</span>
+                    <span class="jm-metaItem">Jan 2026</span>
+                  </div>
+
+                  <h3 class="jm-postMini__title">
+                    <a href="blog-detail.html">Ukuran Ideal Buffet TV: Tinggi, Panjang, dan Jarak Aman</a>
+                  </h3>
+
+                  <div class="jm-postMini__author">
+                    <span class="jm-authorDot" aria-hidden="true"></span>
+                    <span>Tim Desain</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT: SIDEBAR -->
+        <div class="col-12 col-lg-4">
+
+          <aside class="jm-sideCard">
+            <div class="jm-sideTabs" role="tablist" aria-label="Blog sidebar tabs">
+              <button class="jm-sideTab is-active" type="button" data-tab="top">Top Stories</button>
+              <button class="jm-sideTab" type="button" data-tab="trend">Trending</button>
+            </div>
+
+            <div class="jm-sideTitle mt-3">Latest News</div>
+
+            <!-- TOP LIST -->
+            <div class="jm-sideList is-show" data-pane="top">
+
+              <a class="jm-sideItem" href="blog-detail.html">
+                <div class="jm-sideThumb"
+                     style="background-image:url('https://images.unsplash.com/photo-1549497538-303791108f95?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="jm-sideTxt">
+                  <span class="jm-pill">Perawatan</span>
+                  <div class="jm-sideH">Anti Kusam: Cara Bersihkan Meja Jati Tanpa Merusak Finishing</div>
+                  <div class="jm-sideBy">by Workshop</div>
+                </div>
+              </a>
+
+              <a class="jm-sideItem" href="blog-detail.html">
+                <div class="jm-sideThumb"
+                     style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="jm-sideTxt">
+                  <span class="jm-pill">Lemari</span>
+                  <div class="jm-sideH">Tips Memilih Lemari Pakaian untuk Kamar Sempit</div>
+                  <div class="jm-sideBy">by Tim Desain</div>
+                </div>
+              </a>
+
+              <a class="jm-sideItem" href="blog-detail.html">
+                <div class="jm-sideThumb"
+                     style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="jm-sideTxt">
+                  <span class="jm-pill">Ukuran</span>
+                  <div class="jm-sideH">Jarak Ideal Sofa ke Meja: Biar Nyaman & Rapi</div>
+                  <div class="jm-sideBy">by Tim Jembermeubel</div>
+                </div>
+              </a>
+
+              <a class="jm-sideItem" href="blog-detail.html">
+                <div class="jm-sideThumb"
+                     style="background-image:url('https://images.unsplash.com/photo-1582582621959-48d27397dc88?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="jm-sideTxt">
+                  <span class="jm-pill">Finishing</span>
+                  <div class="jm-sideH">Cara Pilih Finishing Natural/Walnut untuk Rumah Terang</div>
+                  <div class="jm-sideBy">by Workshop</div>
+                </div>
+              </a>
+
+            </div>
+
+            <!-- TRENDING LIST -->
+            <div class="jm-sideList" data-pane="trend">
+
+              <a class="jm-sideItem" href="blog-detail.html">
+                <div class="jm-sideThumb"
+                     style="background-image:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="jm-sideTxt">
+                  <span class="jm-pill">Custom</span>
+                  <div class="jm-sideH">Cara Order Custom: Ukuran, Warna, & Referensi yang Benar</div>
+                  <div class="jm-sideBy">by CS</div>
+                </div>
+              </a>
+
+              <a class="jm-sideItem" href="blog-detail.html">
+                <div class="jm-sideThumb"
+                     style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="jm-sideTxt">
+                  <span class="jm-pill">Inspirasi</span>
+                  <div class="jm-sideH">Ruang Makan Minimalis: Kombinasi Meja + Kursi yang Aman</div>
+                  <div class="jm-sideBy">by Tim Desain</div>
+                </div>
+              </a>
+
+              <a class="jm-sideItem" href="blog-detail.html">
+                <div class="jm-sideThumb"
+                     style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="jm-sideTxt">
+                  <span class="jm-pill">Buffet</span>
+                  <div class="jm-sideH">Buffet TV Minimalis: Pilih yang Bisa Rapihin Kabel</div>
+                  <div class="jm-sideBy">by Tim Produksi</div>
+                </div>
+              </a>
+
+            </div>
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BLOG POSTS GRID (SECTION BARU, AMAN DARI CSS LAMA) -->
+<section class="jm-blogGridSection mt-3">
+
+  <div class="jm-blogGrid">
+    <!-- Card 1 -->
+    <article class="jm-postCard">
+      <a class="jm-postCard__media" href="blog-detail.html">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+             alt="Tips memilih lemari pakaian" loading="lazy">
+      </a>
+      <div class="jm-postCard__body">
+        <h3 class="jm-postCard__title">
+          <a href="blog-detail.html">Cara Memilih Lemari 2/3 Pintu yang Pas untuk Ruangan</a>
+        </h3>
+        <div class="jm-postCard__meta">
+          <span class="jm-avatar"></span>
+          <div>
+            <div class="jm-postCard__by">Tim Jembermeubel</div>
+            <div class="jm-postCard__date">Jan 2026</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="jm-postCard">
+      <a class="jm-postCard__media" href="blog-detail.html">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+             alt="Finishing natural vs duco" loading="lazy">
+      </a>
+      <div class="jm-postCard__body">
+        <h3 class="jm-postCard__title">
+          <a href="blog-detail.html">Natural vs Duco: Pilih Finishing yang Cocok untuk Rumahmu</a>
+        </h3>
+        <div class="jm-postCard__meta">
+          <span class="jm-avatar"></span>
+          <div>
+            <div class="jm-postCard__by">Workshop</div>
+            <div class="jm-postCard__date">Jan 2026</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="jm-postCard">
+      <a class="jm-postCard__media" href="blog-detail.html">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80"
+             alt="Layout ruang makan" loading="lazy">
+      </a>
+      <div class="jm-postCard__body">
+        <h3 class="jm-postCard__title">
+          <a href="blog-detail.html">Layout Ruang Makan Kecil: Biar Tetap Lega & Nyaman</a>
+        </h3>
+        <div class="jm-postCard__meta">
+          <span class="jm-avatar"></span>
+          <div>
+            <div class="jm-postCard__by">Tim Desain</div>
+            <div class="jm-postCard__date">Jan 2026</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="jm-postCard">
+      <a class="jm-postCard__media" href="blog-detail.html">
+        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80"
+             alt="Custom meja makan" loading="lazy">
+      </a>
+      <div class="jm-postCard__body">
+        <h3 class="jm-postCard__title">
+          <a href="blog-detail.html">Checklist Saat Custom Meja Makan: Ukuran, Warna, & Kursi</a>
+        </h3>
+        <div class="jm-postCard__meta">
+          <span class="jm-avatar"></span>
+          <div>
+            <div class="jm-postCard__by">CS Jembermeubel</div>
+            <div class="jm-postCard__date">Jan 2026</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 5 -->
+    <article class="jm-postCard">
+      <a class="jm-postCard__media" href="blog-detail.html">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80"
+             alt="Kayu jati vs mahoni" loading="lazy">
+      </a>
+      <div class="jm-postCard__body">
+        <h3 class="jm-postCard__title">
+          <a href="blog-detail.html">Kayu Jati vs Mahoni: Bedanya Apa untuk Furniture Harian?</a>
+        </h3>
+        <div class="jm-postCard__meta">
+          <span class="jm-avatar"></span>
+          <div>
+            <div class="jm-postCard__by">Workshop</div>
+            <div class="jm-postCard__date">Jan 2026</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 6 -->
+    <article class="jm-postCard">
+      <a class="jm-postCard__media" href="blog-detail.html">
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80"
+             alt="Tips packing furniture" loading="lazy">
+      </a>
+      <div class="jm-postCard__body">
+        <h3 class="jm-postCard__title">
+          <a href="blog-detail.html">Cara Packing Furniture yang Aman untuk Pengiriman Jauh</a>
+        </h3>
+        <div class="jm-postCard__meta">
+          <span class="jm-avatar"></span>
+          <div>
+            <div class="jm-postCard__by">Tim Produksi</div>
+            <div class="jm-postCard__date">Jan 2026</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+</section>
+
+
+    <!-- FOOTER (yang kamu pakai sebelumnya) -->
+    <footer class="jm-footer mt-4 mt-lg-5">
+      <div class="container jm-wrap">
+
+        <div class="jm-footerCard">
+          <div class="row g-4 align-items-start">
+
+            <div class="col-12 col-lg-4">
+              <a class="jm-footerBrand d-inline-flex align-items-center gap-2" href="index.html">
+                <span class="jm-brand__dot"></span>
+                <span class="jm-footerBrand__text">Jembermeubel</span>
+              </a>
+
+              <p class="jm-footerDesc mt-2">
+                Furniture kayu rapi & kokoh. Melayani ready stock dan custom ukuran/desain untuk rumah, kantor, atau usaha.
+              </p>
+
+              <div class="jm-footerActions d-flex flex-wrap gap-2 mt-3">
+                <a class="btn jm-btn jm-btn--brand rounded-pill px-4 py-2"
+                   href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
+                   target="_blank" rel="noopener">
+                  Konsultasi WhatsApp
+                </a>
+                <a class="btn jm-btn jm-btn--soft rounded-pill px-4 py-2" href="index.html#galeri">
+                  Lihat Galeri
+                </a>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-8">
+              <div class="row g-4">
+
+                <div class="col-6 col-md-4">
+                  <div class="jm-footerTitle">Menu</div>
+                  <ul class="jm-footerList">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                  </ul>
+                </div>
+
+                <div class="col-6 col-md-4">
+                  <div class="jm-footerTitle">Produk</div>
+                  <ul class="jm-footerList">
+                    <li><a href="mejamakan.html">Meja Makan Jati</a></li>
+                    <li><a href="kursitamu.html">Kursi Tamu</a></li>
+                    <li><a href="lemaripakaian.html">Lemari Pakaian</a></li>
+                    <li><a href="buffettv.html">Buffet TV</a></li>
+                  </ul>
+                </div>
+
+                <div class="col-12 col-md-4">
+                  <div class="jm-footerTitle">Kontak</div>
+
+                  <div class="jm-footerContact">
+                    <div class="jm-footerContact__item">
+                      <span class="jm-footerContact__dot" aria-hidden="true"></span>
+                      <span>Jam respons: <b>09.00–21.00 WIB</b></span>
+                    </div>
+                    <div class="jm-footerContact__item">
+                      <span class="jm-footerContact__dot" aria-hidden="true"></span>
+                      <span>Pengiriman: <b>Seluruh Indonesia</b></span>
+                    </div>
+                    <div class="jm-footerContact__item">
+                      <span class="jm-footerContact__dot" aria-hidden="true"></span>
+                      <a href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
+                         target="_blank" rel="noopener">
+                        WhatsApp: <b>+62 895-3696-9300</b>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="jm-footerMiniNote mt-3">
+                    *Kamu bisa tambah alamat, maps, atau sosial media nanti.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="jm-footerBottom mt-4">
+            <div class="jm-footerCopy">
+              © <span id="jmYear"></span> Jembermeubel. All rights reserved.
+            </div>
+
+            <div class="jm-footerBottomLinks">
+              <a href="about.html">Tentang</a>
+              <span class="jm-footerSep">•</span>
+              <a href="index.html#cara-pesan">Cara Pesan</a>
+              <span class="jm-footerSep">•</span>
+              <a href="index.html#cta">Kontak</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("jmYear").textContent = new Date().getFullYear();
+
+    // Sidebar tabs (Top Stories / Trending)
+    (function(){
+      const tabs = document.querySelectorAll(".jm-sideTab");
+      const panes = document.querySelectorAll(".jm-sideList");
+
+      tabs.forEach(btn => {
+        btn.addEventListener("click", () => {
+          tabs.forEach(x => x.classList.remove("is-active"));
+          btn.classList.add("is-active");
+
+          const key = btn.getAttribute("data-tab");
+          panes.forEach(p => {
+            const isMatch = p.getAttribute("data-pane") === key;
+            p.classList.toggle("is-show", isMatch);
+          });
+        });
+      });
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
