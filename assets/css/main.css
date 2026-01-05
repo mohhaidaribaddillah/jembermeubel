@@ -1,0 +1,3641 @@
+:root{
+  /* Warna meniru screenshot */
+  --hero-bg: #eef4f4;
+  --hero-border: rgba(16, 38, 38, .08);
+
+  --text-dark: #0f1f1f;
+  --text-mid: rgba(15,31,31,.72);
+
+  --teal-soft: #cfe3e1;
+  --teal-soft-2: #dfeceb;
+  --teal-deep: #173f40;
+
+  --white: #ffffff;
+
+  --shadow: 0 12px 30px rgba(0,0,0,.10);
+  --shadow-soft: 0 10px 25px rgba(0,0,0,.10);
+
+  --r-hero: 28px;
+  --r-tile: 22px;
+  --r-pill: 999px;
+
+  --gap: 18px;
+
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Page wrapper (biar hero gak “AI banget” dan tetep clean) */
+.jm-page{
+  margin:0;
+  font-family: var(--font);
+  background: #0b0b0b; /* kalau halaman kamu gelap */
+  color: #f4f4f4;
+}
+
+.jm-wrap{
+  max-width: 1100px;
+}
+
+/* HERO container */
+.jm-hero{
+  background: var(--hero-bg);
+  border: 1px solid var(--hero-border);
+  border-radius: var(--r-hero);
+  padding: 44px;
+  overflow: hidden;
+}
+
+/* LEFT */
+.jm-hero__left{
+  padding-right: 10px;
+  max-width: 520px;
+}
+
+.jm-hero__title{
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  font-size: 46px; /* ini yang paling mirip screenshot */
+}
+
+.jm-hero__desc{
+  margin: 14px 0 18px;
+  color: var(--text-mid);
+  font-size: 14.5px;
+  line-height: 1.75;
+  max-width: 420px;
+}
+
+.jm-expert{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--r-pill);
+  background: #e7f0f0;
+  border: 1px solid rgba(16,38,38,.08);
+  margin-bottom: 18px;
+}
+
+.jm-avatars{
+  display:flex;
+  align-items:center;
+}
+
+.jm-avatars img{
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid #e7f0f0;
+  margin-left: -8px;
+}
+.jm-avatars img:first-child{ margin-left: 0; }
+
+.jm-expert__text{
+  color: #173232;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.jm-hero__btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 22px;
+  border-radius: var(--r-pill);
+  background: var(--teal-deep);
+  color: var(--white);
+  text-decoration:none;
+  font-size: 13.5px;
+  font-weight: 700;
+  border: 1px solid rgba(0,0,0,.06);
+  transition: transform .15s ease, opacity .15s ease;
+    margin-top: 12px;
+  clear: both;
+}
+.jm-expert{
+  display: inline-flex;
+}
+
+.jm-hero__btn:hover{
+  transform: translateY(-1px);
+  opacity: .95;
+}
+
+/* RIGHT mosaic grid (ini kunci “mirip screenshot”) */
+.jm-hero__right{
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--gap);
+  align-items: stretch;
+  height: 100%;
+  padding-left: 6px;
+}
+
+/* Tiles */
+.jm-tile{
+  position: relative;
+  border-radius: var(--r-tile);
+  overflow: hidden;
+  border: 1px solid rgba(16,38,38,.08);
+}
+
+/* big spans 2 rows */
+.jm-tile--big{
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  min-height: 430px; /* pas dengan screenshot */
+  background: var(--teal-soft-2);
+}
+
+.jm-tile--small{
+  background: var(--teal-soft);
+  min-height: 205px;
+}
+
+.jm-tile--promo{
+  background: var(--teal-deep);
+  min-height: 205px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* images */
+.jm-img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+  transform: scale(1.02);
+}
+
+.jm-img--contain{
+  object-fit: contain;
+  padding: 28px 22px 18px; /* biar kursi “mengambang” seperti contoh */
+  background: transparent;
+}
+
+/* label bubble */
+.jm-label{
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: var(--shadow-soft);
+  z-index: 2;
+  min-width: 132px;
+}
+
+.jm-label__title{
+  color: var(--text-dark);
+  font-weight: 800;
+  font-size: 12.5px;
+  line-height: 1.15;
+}
+
+.jm-label__price{
+  margin-top: 4px;
+  color: rgba(15,31,31,.62);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* arrow circle */
+.jm-arrow{
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: var(--white);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color: #173232;
+  font-size: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(16,38,38,.08);
+  z-index: 2;
+  transition: transform .15s ease;
+}
+.jm-arrow:hover{ transform: translateY(-1px); }
+
+.jm-arrow--soft{
+  background: rgba(255,255,255,.92);
+}
+
+/* promo content */
+.jm-promo{
+  text-align: center;
+  padding: 18px 18px;
+}
+
+.jm-promo__title{
+  color: var(--white);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+.jm-promo__desc{
+  margin-top: 6px;
+  color: rgba(255,255,255,.75);
+  font-size: 13px;
+}
+
+.jm-promo__btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border-radius: var(--r-pill);
+  background: rgba(255,255,255,.12);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration:none;
+  border: 1px solid rgba(255,255,255,.16);
+  transition: transform .15s ease, background .15s ease;
+}
+.jm-promo__btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.16);
+}
+
+/* Responsive */
+@media (max-width: 992px){
+  .jm-hero{ padding: 26px; }
+  .jm-hero__title{ font-size: 32px; }
+  .jm-hero__right{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-left: 0;
+  }
+  .jm-tile--big{
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 320px;
+  }
+}
+
+/* NAVBAR (custom look) */
+.jm-navbar{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(10px);
+}
+
+.jm-brand{
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.jm-brand__dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #caa36a;
+  display: inline-block;
+}
+
+.jm-navlink{
+  color: rgba(255,255,255,.78) !important;
+  font-weight: 600;
+  padding: 8px 10px !important;
+  border-radius: 999px;
+  transition: background .15s ease, color .15s ease;
+}
+
+.jm-navlink:hover{
+  background: rgba(255,255,255,.06);
+  color: #fff !important;
+}
+
+.jm-navbtn{
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+.jm-navbtn--outline{
+  background: rgba(255,255,255,.04);
+  color:#fff;
+}
+.jm-navbtn--outline:hover{
+  background: rgba(255,255,255,.08);
+  color:#fff;
+}
+
+.jm-navbtn--brand{
+  background:#caa36a;
+  border-color: transparent;
+  color:#111;
+}
+.jm-navbtn--brand:hover{opacity:.95}
+
+/* bikin toggler keliatan di background gelap */
+.jm-toggler{
+  border: 1px solid rgba(255,255,255,.18) !important;
+}
+.navbar-toggler-icon{
+  filter: invert(1);
+}
+
+/* =========================
+   LIGHT THEME (senada hero)
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+/* (1) Page background jadi terang */
+.jm-page{
+  margin:0;
+  font-family: var(--font);
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(207,227,225,.55), transparent 60%),
+    linear-gradient(180deg, #f6fbfb 0%, #eef4f4 40%, #f6fbfb 100%);
+  color: var(--text-dark);
+}
+
+/* wrapper tetap */
+.jm-wrap{ max-width: 1100px; }
+
+/* (2) Navbar ikut warna hero (bukan dark glass) */
+.jm-navbar{
+  background: rgba(238, 244, 244, .85);          /* hero-like */
+  border: 1px solid rgba(16, 38, 38, .10);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+}
+
+/* brand & link jadi gelap */
+.jm-brand{
+  color: var(--text-dark) !important;
+}
+
+.jm-navlink{
+  color: rgba(15,31,31,.72) !important;
+}
+.jm-navlink:hover{
+  background: rgba(15,31,31,.06);
+  color: var(--text-dark) !important;
+}
+
+/* dot brand biar senada teal (opsional) */
+.jm-brand__dot{
+  background: #2f6f70; /* teal medium */
+}
+
+/* (3) Tombol navbar: outline jadi soft light */
+.jm-navbtn{
+  font-weight: 700;
+  border: 1px solid rgba(16, 38, 38, .12);
+}
+
+.jm-navbtn--outline{
+  background: rgba(255,255,255,.55);
+  color: var(--text-dark);
+}
+.jm-navbtn--outline:hover{
+  background: rgba(255,255,255,.78);
+  color: var(--text-dark);
+}
+
+/* tombol brand tetap kontras */
+.jm-navbtn--brand{
+  background: var(--teal-deep);
+  color: #fff;
+  border-color: transparent;
+}
+.jm-navbtn--brand:hover{ opacity: .95; }
+
+/* (4) Toggler icon jangan invert (karena navbar terang) */
+.jm-toggler{
+  border: 1px solid rgba(16,38,38,.18) !important;
+}
+.navbar-toggler-icon{
+  filter: none;
+}
+
+/* (5) Hero tetap sama, tapi kasih shadow soft biar “nempel” dengan tema terang */
+.jm-hero{
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+}
+
+/* ===== Keunggulan section header ===== */
+#keunggulan .jm-sectionHead{
+  max-width: 720px;
+}
+
+#keunggulan .jm-sectionTitle{
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+#keunggulan .jm-sectionDesc{
+  margin: 8px 0 0;
+  color: rgba(15,31,31,.72);
+  font-size: 13.8px;
+  line-height: 1.7;
+}
+
+/* ===== Cards senada hero ===== */
+#keunggulan .jm-feature{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.75);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+}
+
+#keunggulan .jm-feature__body{
+  padding: 18px 18px;
+}
+
+#keunggulan .jm-feature__icon{
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(23,63,64,.10);
+  color: #173f40;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+#keunggulan .jm-feature__title{
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+#keunggulan .jm-feature__desc{
+  margin: 8px 0 0;
+  color: rgba(15,31,31,.72);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+/* helper muted */
+.jm-muted{ color: rgba(15,31,31,.72); }
+
+/* ===== Kategori ===== */
+#kategori .jm-cat{
+  text-decoration:none;
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.75);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+#kategori .jm-cat:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.08);
+}
+#kategori .jm-cat__body{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  padding: 18px;
+}
+#kategori .jm-cat__icon{
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(23,63,64,.10);
+  color: #173f40;
+  font-size: 18px;
+  flex: 0 0 auto;
+}
+#kategori .jm-cat__title{
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: 15.5px;
+  line-height: 1.2;
+}
+#kategori .jm-cat__desc{
+  margin-top: 4px;
+  color: rgba(15,31,31,.72);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ===== Produk ===== */
+#produk .jm-product{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.75);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+}
+#produk .jm-product__img{
+  height: 170px;
+  background: #dfeceb;
+  background-size: cover;
+  background-position: center;
+}
+#produk .jm-product__title{
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: 15.5px;
+  line-height: 1.25;
+}
+#produk .jm-product__meta{
+  margin: 6px 0 0;
+  color: rgba(15,31,31,.72);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.jm-badge{
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.12);
+  border: 1px solid rgba(23,63,64,.16);
+  color: #173f40;
+  font-weight: 800;
+  font-size: 12px;
+}
+.jm-badge--soft{
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(16,38,38,.10);
+}
+
+/* ===== Steps ===== */
+#cara-pesan .jm-step{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.75);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+}
+#cara-pesan .jm-step__no{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(23,63,64,.12);
+  color:#173f40;
+  font-weight: 900;
+}
+#cara-pesan .jm-step__title{
+  margin-top: 10px;
+  color: var(--text-dark);
+  font-weight: 800;
+  font-size: 15.5px;
+  letter-spacing: -0.01em;
+}
+#cara-pesan .jm-step__desc{
+  margin-top: 6px;
+  color: rgba(15,31,31,.72);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+/* ===== Gallery + Filter Tabs (lebih soft & menarik) ===== */
+
+#galeri .jm-galleryTabs{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#galeri .jm-tab{
+  appearance: none;
+  border: 1px solid rgba(16,38,38,.12);
+  background: rgba(255,255,255,.55);
+  color: rgba(15,31,31,.78);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease, color .15s ease;
+  backdrop-filter: blur(8px);
+}
+
+#galeri .jm-tab:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.78);
+  color: var(--text-dark);
+  border-color: rgba(23,63,64,.18);
+}
+
+#galeri .jm-tab.is-active{
+  background: rgba(23,63,64,.10);
+  color: #173f40;
+  border-color: rgba(23,63,64,.22);
+}
+
+/* item show/hide anim */
+#galeri .jm-galleryItem{
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+#galeri .jm-galleryItem.is-hidden{
+  opacity: 0;
+  transform: scale(.98);
+  pointer-events: none;
+  display: none; /* penting biar grid rapih setelah difilter */
+}
+
+/* Card */
+#galeri .jm-gallery{
+  position: relative;
+  display:block;
+  border-radius: 18px;
+  overflow:hidden;
+  border: 1px solid rgba(16,38,38,.10);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  background: rgba(238,244,244,.75);
+}
+
+#galeri .jm-gallery img{
+  width:100%;
+  height: 240px;
+  object-fit: cover;
+  display:block;
+  transition: transform .35s ease, filter .35s ease;
+}
+
+/* hover effect lebih elegan */
+#galeri .jm-gallery:hover img{
+  transform: scale(1.05);
+  filter: saturate(1.05) contrast(1.02);
+}
+
+/* tag kecil (tanpa overlay putih full) */
+#galeri .jm-galleryTag{
+  position:absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 2;
+
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+
+  padding: 8px 10px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(16,38,38,.12);
+  color: #173f40;
+  font-weight: 900;
+  font-size: 12px;
+
+  backdrop-filter: blur(8px);
+}
+
+/* responsive */
+@media (max-width: 576px){
+  #galeri .jm-gallery img{ height: 180px; }
+  #galeri .jm-tab{ padding: 9px 12px; font-size: 12.5px; }
+}
+
+
+/* ============================
+   TESTIMONI (mirip gambar + lebih premium)
+   ============================ */
+
+#testimoni .jm-testiCarousel{
+  position: relative;
+  padding-bottom: 46px; /* ruang untuk dots */
+}
+
+/* Dots di bawah (mirip gambar) */
+#testimoni .jm-testiDots{
+  bottom: 0;
+  margin-bottom: 0;
+  gap: 10px;
+}
+#testimoni .jm-testiDots [data-bs-target]{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(202,163,106,.75);
+  background: transparent;
+  opacity: 1;
+}
+#testimoni .jm-testiDots .active{
+  background: rgba(202,163,106,.95);
+}
+
+/* Card review: putih, clean, shadow halus */
+#testimoni .jm-review{
+  position: relative;
+  border: 0;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow:
+    0 18px 34px rgba(0,0,0,.08),
+    0 2px 10px rgba(0,0,0,.04);
+  overflow: visible; /* supaya avatar boleh keluar */
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+/* hover lebih “mahal” */
+#testimoni .jm-review:hover{
+  transform: translateY(-3px);
+  box-shadow:
+    0 24px 44px rgba(0,0,0,.10),
+    0 4px 12px rgba(0,0,0,.05);
+}
+
+/* Body lebih lega, kiri dibuat lebih “napas” seperti gambar */
+#testimoni .jm-review .card-body{
+  padding: 26px 26px 22px;
+}
+
+/* Avatar posisi “nongol” di kiri (mirip gambar) */
+#testimoni .jm-review__avatarWrap{
+  position: absolute;
+  left: -18px;
+  top: 22px;
+  width: 66px;
+  height: 66px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 14px 26px rgba(0,0,0,.12);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+}
+
+#testimoni .jm-review__avatar{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Header text */
+#testimoni .jm-review__head{
+  padding-left: 64px; /* ngasih ruang untuk avatar */
+}
+
+#testimoni .jm-review__name{
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+#testimoni .jm-review__role{
+  margin-top: 4px;
+  color: rgba(15,31,31,.55);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Stars: kuning, rapi */
+#testimoni .jm-review__stars{
+  margin-top: 8px;
+  color: #f5b301; /* kuning bintang */
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+/* Quote text: italic + tanda kutip besar (mirip gambar) */
+#testimoni .jm-review__text{
+  margin: 16px 0 0;
+  padding-left: 64px;
+  color: rgba(15,31,31,.68);
+  font-size: 14.2px;
+  line-height: 1.9;
+  font-style: italic;
+  position: relative;
+}
+
+/* kutip besar kiri */
+#testimoni .jm-review__text::before{
+  content: "“";
+  position: absolute;
+  left: 64px;
+  top: -18px;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(202,163,106,.55);
+}
+
+/* kutip besar kanan (lebih subtle, lebih bagus) */
+#testimoni .jm-review__text::after{
+  content: "”";
+  margin-left: 6px;
+  color: rgba(202,163,106,.45);
+  font-weight: 900;
+}
+
+/* Responsive: di mobile avatar jangan terlalu keluar */
+@media (max-width: 576px){
+  #testimoni .jm-review__avatarWrap{
+    left: 16px;
+    top: 16px;
+  }
+  #testimoni .jm-review__head{
+    padding-left: 78px;
+  }
+  #testimoni .jm-review__text{
+    padding-left: 0;
+    margin-top: 14px;
+  }
+  #testimoni .jm-review__text::before{
+    left: 0;
+  }
+}
+
+
+/* ===== FAQ ===== */
+#faq .jm-faq{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.75);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+}
+#faq details{
+  padding: 12px 0;
+  border-top: 1px solid rgba(16,38,38,.10);
+}
+#faq details:first-child{ border-top: 0; }
+#faq summary{
+  cursor:pointer;
+  color: var(--text-dark);
+  font-weight: 800;
+}
+#faq details p{ margin: 0; }
+
+/* ===== CTA (lebih premium, hidup, senada hero) ===== */
+#cta .jm-cta{
+  border-radius: 24px;
+  border: 1px solid rgba(16,38,38,.10);
+  background:
+    radial-gradient(850px 380px at 12% 0%, rgba(207,227,225,.55), transparent 60%),
+    radial-gradient(650px 280px at 85% 15%, rgba(202,163,106,.18), transparent 55%),
+    rgba(238,244,244,.90);
+  box-shadow: 0 18px 38px rgba(0,0,0,.08);
+  overflow: hidden;
+  position: relative;
+}
+
+/* soft highlight layer */
+#cta .jm-cta::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    linear-gradient(120deg, rgba(23,63,64,.08), transparent 35%, rgba(202,163,106,.10));
+  opacity: .7;
+  pointer-events:none;
+}
+
+#cta .jm-cta__body{
+  position: relative;
+  padding: 26px;
+}
+
+/* Judul & desc khusus CTA (biar beda dari section lain) */
+#cta .jm-cta__title{
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  font-size: 28px;
+}
+
+#cta .jm-cta__desc{
+  margin: 10px 0 0;
+  color: rgba(15,31,31,.70);
+  font-size: 15.2px;
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+/* Note */
+#cta .jm-cta__note{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(16,38,38,.10);
+  color: rgba(15,31,31,.75);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#cta .jm-cta__dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.85);
+  box-shadow: 0 0 0 4px rgba(23,63,64,.10);
+}
+
+/* tombol soft (Copy) */
+#cta .jm-btn--soft{
+  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(16,38,38,.12);
+  color: var(--text-dark);
+  font-weight: 800;
+}
+#cta .jm-btn--soft:hover{
+  background: rgba(255,255,255,.88);
+}
+
+/* Mini box */
+#cta .jm-cta__mini{
+  background: rgba(255,255,255,.62);
+  border: 1px solid rgba(16,38,38,.10);
+  border-radius: 18px;
+  padding: 16px 16px;
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+}
+
+#cta .jm-cta__miniTop{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#cta .jm-cta__miniTitle{
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+#cta .jm-cta__miniBadge{
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.10);
+  border: 1px solid rgba(23,63,64,.14);
+  color: #173f40;
+  font-weight: 900;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+#cta .jm-cta__miniText{
+  color: rgba(15,31,31,.78);
+  font-size: 13.8px;
+  line-height: 1.75;
+}
+
+#cta .jm-cta__miniHint{
+  margin-top: 10px;
+  color: rgba(15,31,31,.62);
+  font-size: 12.7px;
+  font-weight: 700;
+}
+
+/* Toast */
+#cta .jm-ctaToast{
+  margin-top: 10px;
+  width: max-content;
+  max-width: 100%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(23,63,64,.10);
+  border: 1px solid rgba(23,63,64,.16);
+  color: #173f40;
+  font-weight: 800;
+  font-size: 13px;
+  display: none;
+}
+
+#cta .jm-ctaToast.is-show{
+  display: inline-flex;
+}
+
+/* responsive */
+@media (max-width: 992px){
+  #cta .jm-cta__body{ padding: 22px; }
+  #cta .jm-cta__title{ font-size: 24px; }
+  #cta .jm-cta__desc{ font-size: 14.6px; }
+}
+/* ===== CTA form inputs (nyatu dengan tema hero) ===== */
+#cta .jm-ctaForm{
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+#cta .jm-ctaLabel{
+  display: grid;
+  gap: 6px;
+  font-weight: 800;
+  color: rgba(15,31,31,.78);
+  font-size: 12.5px;
+}
+
+#cta .jm-ctaInput,
+#cta .jm-ctaTextarea{
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(16,38,38,.12);
+  background: rgba(255,255,255,.72);
+  color: var(--text-dark);
+  padding: 10px 12px;
+  font-size: 13.5px;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+#cta .jm-ctaTextarea{
+  resize: vertical;
+  min-height: 86px;
+}
+
+#cta .jm-ctaInput:focus,
+#cta .jm-ctaTextarea:focus{
+  border-color: rgba(23,63,64,.28);
+  box-shadow: 0 0 0 4px rgba(23,63,64,.10);
+  background: rgba(255,255,255,.90);
+}
+
+
+
+/* ===== KATEGORI MOSAIC (mirip contoh) ===== */
+#kategori .jm-catGrid{
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  grid-template-rows: 180px 180px;
+  gap: 18px;
+}
+
+/* Card base */
+#kategori .jm-catCard{
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(16,38,38,.10);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+#kategori .jm-catCard:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.08);
+}
+
+/* posisi varian */
+#kategori .jm-catCard--big{
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  min-height: 380px;
+}
+
+#kategori .jm-catCard--wide{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+#kategori .jm-catCard--small{
+  grid-column: auto;
+  grid-row: 2 / 3;
+}
+
+/* meta text */
+#kategori .jm-catCard__meta{
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2;
+  max-width: 70%;
+}
+
+#kategori .jm-catCard__title{
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: 15.5px;
+  line-height: 1.2;
+}
+
+#kategori .jm-catCard__sub{
+  margin-top: 6px;
+  color: rgba(15,31,31,.60);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* image */
+#kategori .jm-catCard__img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .98;
+  transform: scale(1.02);
+}
+
+/* haluskan image biar mirip “clean card” */
+#kategori .jm-catCard::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(238,244,244,.86) 0%, rgba(238,244,244,.15) 55%, rgba(238,244,244,0) 100%);
+  z-index:1;
+}
+
+/* alignment helper untuk gambar */
+#kategori .jm-catCard__img--right{ object-position: right center; }
+#kategori .jm-catCard__img--center{ object-position: center center; }
+#kategori .jm-catCard__img--bottom{ object-position: center bottom; }
+
+/* row card (optional 2 kategori tambahan) */
+#kategori .jm-catCard--row{
+  height: 150px;
+}
+#kategori .jm-catCard--row .jm-catCard__meta{
+  max-width: 60%;
+}
+
+/* responsive */
+@media (max-width: 992px){
+  #kategori .jm-catGrid{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  #kategori .jm-catCard--big,
+  #kategori .jm-catCard--wide,
+  #kategori .jm-catCard--small{
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 220px;
+  }
+}
+
+/* =========================================================
+   FINAL PATCH (JANGAN DIHAPUS) — override tanpa menghapus struktur
+   ========================================================= */
+
+/* (A) Website tidak kekecilan: lebarkan container + kecilkan padding container bootstrap */
+.jm-wrap{
+  max-width: 1240px; /* lebih “umum” website */
+}
+
+/* override padding default bootstrap container supaya kiri kanan tidak terlalu lebar */
+.jm-wrap.container{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (min-width: 992px){
+  .jm-wrap.container{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* (B) KATEGORI POPULER: hilangkan overlay putih di gambar (tanpa menghapus blok aslinya) */
+#kategori .jm-catCard::after{
+  content: none !important;
+}
+
+/* agar teks tetap kebaca tanpa overlay full */
+#kategori .jm-catCard__meta{
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(16,38,38,.10);
+  border-radius: 14px;
+  padding: 10px 12px;
+  backdrop-filter: blur(6px);
+}
+
+/* optional: teks sedikit lebih kontras */
+#kategori .jm-catCard__sub{
+  color: rgba(15,31,31,.66);
+}
+
+/* optional: gambar lebih tajam */
+#kategori .jm-catCard__img{
+  opacity: 1;
+  transform: scale(1.01);
+}
+
+/* =========================
+   PRODUK UNGGULAN — versi lebih “hidup” (4 sejajar) + 1 tombol Detail
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+#produk .jm-pCard{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  border-radius: 18px;
+  overflow: hidden;
+
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.78);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+#produk .jm-pCard:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.09);
+  border-color: rgba(23,63,64,.18);
+}
+
+/* Media image */
+#produk .jm-pCard__media{
+  position: relative;
+  height: 190px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Badge */
+#produk .jm-pCard__badge{
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.90);
+  border: 1px solid rgba(16,38,38,.10);
+  color: #173f40;
+  font-weight: 800;
+  font-size: 12px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+}
+
+#produk .jm-pCard__badge--soft{
+  background: rgba(255,255,255,.70);
+}
+
+/* Body */
+#produk .jm-pCard__body{
+  padding: 16px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+#produk .jm-pCard__title{
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 15.5px;
+  line-height: 1.25;
+}
+
+#produk .jm-pCard__meta{
+  margin: 0;
+  color: rgba(15,31,31,.72);
+  font-size: 13.2px;
+  line-height: 1.6;
+}
+
+/* Footer row (lebih natural, gak kaku seperti tombol full width) */
+#produk .jm-pCard__foot{
+  margin-top: auto;
+  padding-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  border-top: 1px solid rgba(16,38,38,.08);
+}
+
+#produk .jm-pCard__hint{
+  color: rgba(15,31,31,.60);
+  font-size: 12.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#produk .jm-pCard__btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.10);
+  border: 1px solid rgba(23,63,64,.14);
+  color: #173f40;
+  font-weight: 900;
+  font-size: 12.5px;
+  white-space: nowrap;
+
+  transition: transform .15s ease, background .15s ease;
+}
+
+#produk .jm-pCard:hover .jm-pCard__btn{
+  background: rgba(23,63,64,.14);
+  transform: translateY(-1px);
+}
+
+/* Responsive height image */
+@media (max-width: 576px){
+  #produk .jm-pCard__media{ height: 170px; }
+}
+
+/* FIX: pastikan judul section center tidak ketimpa rule lain */
+.jm-sectionHead--center .jm-sectionTitle{
+  font-size: 34px !important;
+  font-weight: 900 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.jm-sectionHead--center .jm-sectionDesc{
+  font-size: 16px !important;
+}
+
+/* Kalau ini khusus terjadi di Keunggulan, paksa juga via ID */
+#keunggulan .jm-sectionHead--center .jm-sectionTitle{
+  font-size: 34px !important;
+}
+#keunggulan .jm-sectionHead--center .jm-sectionDesc{
+  font-size: 16px !important;
+}
+
+@media (max-width: 576px){
+  .jm-sectionHead--center .jm-sectionTitle{ font-size: 26px !important; }
+  .jm-sectionHead--center .jm-sectionDesc{ font-size: 14.8px !important; }
+}
+/* FIX: paksa section head benar-benar center */
+.jm-sectionHead.jm-sectionHead--center{
+  width: 100%;
+  display: block !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 900px;
+}
+
+/* Pastikan anaknya juga center */
+.jm-sectionHead.jm-sectionHead--center .jm-sectionTitle,
+.jm-sectionHead.jm-sectionHead--center .jm-sectionDesc{
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* =========================
+   GLOBAL SECTION SPACING
+   Tempel di paling bawah main.css
+   ========================= */
+
+/* Semua section punya jarak atas-bawah yang konsisten */
+.jm-section{
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+/* Kalau kamu pakai section yang tidak punya class jm-section (mis. hero), tetap aman */
+section{
+  scroll-margin-top: 90px; /* supaya anchor (#produk) gak ketutup navbar */
+}
+
+/* Hilangkan efek "nempel" karena margin collapse (umum di h2/p pertama) */
+.jm-section::before,
+.jm-section::after{
+  content: "";
+  display: table;
+}
+
+/* Mobile: jarak sedikit lebih kecil */
+@media (max-width: 992px){
+  .jm-section{
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+}
+
+/* Kalau kamu masih pakai mt-4/mt-lg-5 di beberapa section,
+   ini bikin jaraknya tetap enak tanpa jadi terlalu besar */
+.jm-section.mt-4,
+.jm-section.mt-lg-5{
+  margin-top: 0 !important;
+}
+
+
+
+
+
+/* =========================
+   ABOUT PAGE (layout mirip screenshot)
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+/* Page Header */
+.jm-pageHead{
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.85);
+  box-shadow: 0 18px 38px rgba(0,0,0,.08);
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+}
+
+/* tambahan halus: biar konten center rapi */
+.jm-pageHead{
+  text-align: center;
+}
+
+.jm-pageHead__bg{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 100%),
+    url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=2000&q=80")
+    center/cover no-repeat;
+  transform: scale(1.02);
+}
+
+/* tambahan halus: animasi hover background (tidak wajib, aman) */
+.jm-pageHead:hover .jm-pageHead__bg{
+  transform: scale(1.04);
+  transition: transform .35s ease;
+}
+
+.jm-pageHead__inner{
+  position: relative;
+  z-index: 1;
+  padding: 44px 18px;
+}
+
+.jm-pageHead__title{
+  margin: 0;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 44px;
+  line-height: 1.05;
+}
+
+.jm-pageHead__crumbs{
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(255,255,255,.82);
+}
+.jm-pageHead__crumbs a{
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+}
+.jm-pageHead__crumbs a:hover{ text-decoration: underline; }
+.jm-pageHead__sep{ margin: 0 8px; opacity: .75; }
+
+@media (max-width: 576px){
+  .jm-pageHead{ min-height: 190px; }
+  .jm-pageHead__title{ font-size: 34px; }
+}
+
+/* About card kiri */
+.jm-aboutCard{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.80);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  padding: 22px;
+}
+
+/* tambahan halus: hover biar tidak kaku */
+.jm-aboutCard{
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.jm-aboutCard:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.08);
+  border-color: rgba(23,63,64,.14);
+}
+
+.jm-aboutCard__small{
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.10);
+  border: 1px solid rgba(23,63,64,.14);
+  color: #173f40;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.jm-aboutCard__title{
+  margin: 12px 0 0;
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.jm-aboutCard__desc{
+  margin: 10px 0 0;
+  color: rgba(15,31,31,.72);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.jm-aboutList{
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: rgba(15,31,31,.72);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.jm-aboutList li{ margin: 6px 0; }
+
+/* About image */
+.jm-aboutMedia{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(16,38,38,.10);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+}
+
+/* tambahan halus: biar image tile terasa premium */
+.jm-aboutMedia{
+  background: rgba(255,255,255,.65);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.jm-aboutMedia:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.08);
+}
+
+.jm-aboutMedia img{
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display:block;
+  transition: transform .25s ease;
+}
+.jm-aboutMedia:hover img{ transform: scale(1.02); }
+
+.jm-aboutMedia--tall img{ height: 420px; }
+
+@media (max-width: 576px){
+  .jm-aboutMedia img{ height: 260px; }
+  .jm-aboutMedia--tall img{ height: 300px; }
+}
+
+/* Stats */
+.jm-stats{
+  padding: 4px 0;
+}
+
+.jm-statCard{
+  text-align: center;
+  border-radius: 16px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(255,255,255,.70);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  padding: 16px 14px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.jm-statCard:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.08);
+}
+
+.jm-statCard__num{
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #173f40;
+  font-size: 22px;
+  line-height: 1.1;
+}
+.jm-statCard__label{
+  margin-top: 6px;
+  color: rgba(15,31,31,.65);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* About block kanan (points) */
+.jm-aboutBlock{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.80);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  padding: 22px;
+}
+
+/* tambahan halus: hover biar hidup */
+.jm-aboutBlock{
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.jm-aboutBlock:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.08);
+  border-color: rgba(23,63,64,.14);
+}
+
+.jm-aboutBlock__title{
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.jm-aboutBlock__desc{
+  margin: 10px 0 0;
+  color: rgba(15,31,31,.72);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.jm-aboutPoints{
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.jm-point{
+  display:flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(16,38,38,.10);
+}
+
+/* tambahan halus: hover item point */
+.jm-point{
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.jm-point:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.78);
+  border-color: rgba(23,63,64,.14);
+}
+
+.jm-point__icon{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display:grid;
+  place-items:center;
+  background: rgba(23,63,64,.10);
+  border: 1px solid rgba(23,63,64,.12);
+  color: #173f40;
+  font-weight: 900;
+  flex: 0 0 auto;
+}
+
+.jm-point__title{
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 14.5px;
+  line-height: 1.25;
+}
+
+.jm-point__desc{
+  margin-top: 4px;
+  color: rgba(15,31,31,.70);
+  font-size: 13.2px;
+  line-height: 1.65;
+}
+
+/* Team */
+.jm-teamCard{
+  padding: 12px 10px 4px;
+}
+.jm-teamCard__img{
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 6px solid rgba(238,244,244,.95);
+  box-shadow: 0 16px 28px rgba(0,0,0,.08);
+}
+
+/* tambahan halus: hover gambar team */
+.jm-teamCard__img{
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.jm-teamCard__img:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.10);
+}
+
+.jm-teamCard__name{
+  margin-top: 12px;
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+  font-size: 14.5px;
+}
+.jm-teamCard__role{
+  margin-top: 4px;
+  color: rgba(15,31,31,.62);
+  font-weight: 800;
+  font-size: 12.5px;
+}
+
+/* =========================
+   BUTTON FIX (PASTI BERWARNA)
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+/* BRAND button */
+a.btn.jm-btn.jm-btn--brand,
+button.btn.jm-btn.jm-btn--brand{
+  background: linear-gradient(135deg, #173f40 0%, #2f6f70 55%, #5aa7a6 110%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(23,63,64,.14) !important;
+  box-shadow:
+    0 16px 28px rgba(23,63,64,.18),
+    0 10px 20px rgba(0,0,0,.06) !important;
+  position: relative;
+  overflow: hidden;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+}
+
+/* highlight tipis */
+a.btn.jm-btn.jm-btn--brand::after,
+button.btn.jm-btn.jm-btn--brand::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background: radial-gradient(420px 160px at 18% 0%,
+    rgba(255,255,255,.22), transparent 60%);
+  pointer-events:none;
+  opacity:.9;
+}
+
+a.btn.jm-btn.jm-btn--brand:hover,
+button.btn.jm-btn.jm-btn--brand:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+  box-shadow:
+    0 18px 34px rgba(23,63,64,.22),
+    0 14px 26px rgba(0,0,0,.08) !important;
+}
+
+/* SOFT button (tetap ada warna, bukan polos) */
+a.btn.jm-btn.jm-btn--soft,
+button.btn.jm-btn.jm-btn--soft{
+  background:
+    radial-gradient(360px 140px at 18% 0%, rgba(90,167,166,.22), transparent 60%),
+    rgba(255,255,255,.78) !important;
+  color: #173f40 !important;
+  border: 1px solid rgba(16,38,38,.14) !important;
+  box-shadow: 0 12px 22px rgba(0,0,0,.06) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+}
+
+a.btn.jm-btn.jm-btn--soft:hover,
+button.btn.jm-btn.jm-btn--soft:hover{
+  transform: translateY(-2px);
+  background:
+    radial-gradient(360px 140px at 18% 0%, rgba(90,167,166,.30), transparent 60%),
+    rgba(255,255,255,.92) !important;
+  box-shadow: 0 16px 30px rgba(0,0,0,.08) !important;
+}
+
+/* optional: matikan efek bootstrap ketika focus */
+a.btn.jm-btn.jm-btn--brand:focus,
+a.btn.jm-btn.jm-btn--soft:focus,
+button.btn.jm-btn.jm-btn--brand:focus,
+button.btn.jm-btn.jm-btn--soft:focus{
+  box-shadow: 0 0 0 4px rgba(47,111,112,.18) !important;
+}
+/* =========================
+   OUTLINE BUTTON (SENADA HERO)
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+a.btn.jm-btn.jm-btn--outline,
+button.btn.jm-btn.jm-btn--outline{
+  background: rgba(255,255,255,.70) !important;
+  color: #173f40 !important;
+  border: 1px solid rgba(23,63,64,.22) !important;
+  box-shadow: 0 10px 18px rgba(0,0,0,.05) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  transition: transform .15s ease, background .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+a.btn.jm-btn.jm-btn--outline:hover,
+button.btn.jm-btn.jm-btn--outline:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.92) !important;
+  border-color: rgba(23,63,64,.32) !important;
+  box-shadow: 0 16px 28px rgba(0,0,0,.08) !important;
+}
+
+/* focus ring biar konsisten */
+a.btn.jm-btn.jm-btn--outline:focus,
+button.btn.jm-btn.jm-btn--outline:focus{
+  box-shadow: 0 0 0 4px rgba(47,111,112,.16) !important;
+}
+
+
+/* NAVBAR DROPDOWN (senada hero) */
+.jm-navbar .dropdown-menu.jm-dropdown{
+  border-radius: 16px;
+  padding: 8px;
+  border: 1px solid rgba(16,38,38,.12);
+  background: rgba(238,244,244,.95);
+  box-shadow: 0 18px 34px rgba(0,0,0,.10);
+  min-width: 240px;
+}
+
+.jm-navbar .dropdown-item.jm-ddItem{
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 800;
+  color: rgba(15,31,31,.78);
+  transition: background .15s ease, color .15s ease, transform .15s ease;
+}
+
+.jm-navbar .dropdown-item.jm-ddItem:hover{
+  background: rgba(23,63,64,.08);
+  color: #0f1f1f;
+  transform: translateY(-1px);
+}
+
+.jm-navbar .dropdown-divider.jm-ddDiv{
+  border-top: 1px solid rgba(16,38,38,.10);
+  margin: 6px 8px;
+}
+/* =========================
+   STICKY NAVBAR (ikut scroll)
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+/* penting: kasih ruang atas-bawah saat sticky */
+.jm-navbarSticky{
+  top: 14px;                 /* jarak dari atas layar */
+  z-index: 1030;             /* di atas konten lain */
+}
+
+/* sticky look: lebih solid + blur */
+.jm-navbar.jm-navbarSticky{
+  background: rgba(238,244,244,.92);
+  border: 1px solid rgba(16, 38, 38, .10);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.08);
+}
+
+/* biar konten tidak ketutup sticky top (opsional tapi enak) */
+.jm-wrap{
+  padding-top: 8px;
+}
+
+/* =========================
+   DROPDOWN STYLE (senada hero)
+   ========================= */
+.jm-navbar .dropdown-menu.jm-dropdown{
+  border-radius: 16px;
+  padding: 8px;
+  border: 1px solid rgba(16,38,38,.12);
+  background: rgba(238,244,244,.96);
+  box-shadow: 0 18px 34px rgba(0,0,0,.10);
+  min-width: 240px;
+  margin-top: 10px; /* jarak dari nav */
+}
+
+/* item */
+.jm-navbar .dropdown-item.jm-ddItem{
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 800;
+  color: rgba(15,31,31,.80);
+  transition: background .15s ease, color .15s ease, transform .15s ease;
+}
+
+.jm-navbar .dropdown-item.jm-ddItem:hover{
+  background: rgba(23,63,64,.08);
+  color: #0f1f1f;
+  transform: translateY(-1px);
+}
+
+/* divider */
+.jm-navbar .dropdown-divider.jm-ddDiv{
+  border-top: 1px solid rgba(16,38,38,.10);
+  margin: 6px 8px;
+}
+
+/* kalau navbar kamu terang, toggler icon jangan invert */
+.navbar-toggler-icon{
+  filter: none !important;
+}
+
+/* =========================
+   (Opsional) Dropdown hover di desktop
+   Kalau kamu mau klik saja, hapus blok ini
+   ========================= */
+@media (min-width: 992px){
+  .jm-navbar .nav-item.dropdown:hover > .dropdown-menu{
+    display: block;
+  }
+}
+
+ /* spacing section biar nggak nempel */
+    .jm-section{ padding: 14px 0; }
+
+    /* DETAIL card */
+    .jm-detailCard{
+      border-radius: 20px;
+      border: 1px solid rgba(16,38,38,.10);
+      background: rgba(238,244,244,.80);
+      box-shadow: 0 12px 26px rgba(0,0,0,.06);
+      overflow: hidden;
+    }
+    .jm-detailMedia{
+      border-bottom: 1px solid rgba(16,38,38,.10);
+      background: #dfeceb;
+    }
+    .jm-detailMedia img{
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display:block;
+      transition: transform .25s ease;
+    }
+    .jm-detailCard:hover .jm-detailMedia img{ transform: scale(1.02); }
+
+    .jm-detailBody{ padding: 18px 18px 20px; }
+
+    .jm-detailTitle{
+      margin: 0;
+      color: var(--text-dark);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+    .jm-detailDesc{
+      margin-top: 10px;
+      color: rgba(15,31,31,.72);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .jm-detailHighlights{ display: grid; gap: 10px; }
+    .jm-pointLine{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.60);
+      border: 1px solid rgba(16,38,38,.10);
+      color: rgba(15,31,31,.74);
+      font-size: 13.6px;
+      line-height: 1.65;
+    }
+    .jm-pointLine__dot{
+      width: 10px;
+      height: 10px;
+      margin-top: 6px;
+      border-radius: 999px;
+      background: rgba(23,63,64,.30);
+      box-shadow: inset 0 0 0 2px rgba(23,63,64,.20);
+      flex: 0 0 auto;
+    }
+
+    .jm-detailSplit{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .jm-detailSpec{
+      border-radius: 16px;
+      border: 1px solid rgba(16,38,38,.10);
+      background: rgba(255,255,255,.60);
+      padding: 12px 12px;
+    }
+    .jm-detailSpec__title{
+      font-weight: 900;
+      color: var(--text-dark);
+      letter-spacing: -0.01em;
+      font-size: 14px;
+    }
+    .jm-detailList{
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: rgba(15,31,31,.72);
+      font-size: 13.4px;
+      line-height: 1.7;
+    }
+    .jm-detailList li{ margin: 6px 0; }
+
+    .jm-detailCTA{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ORDER card */
+    .jm-orderCard{
+      border-radius: 20px;
+      border: 1px solid rgba(16,38,38,.10);
+      background:
+        radial-gradient(520px 220px at 20% 0%, rgba(207,227,225,.55), transparent 55%),
+        rgba(238,244,244,.85);
+      box-shadow: 0 12px 26px rgba(0,0,0,.06);
+      padding: 16px;
+      position: sticky;
+      top: 110px; /* aman karena navbar sticky */
+    }
+    .jm-orderHead{
+      padding: 10px 10px 14px;
+      border-bottom: 1px solid rgba(16,38,38,.10);
+      margin-bottom: 14px;
+    }
+    .jm-orderHead__title{
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      font-size: 16px;
+    }
+    .jm-orderHead__sub{
+      margin-top: 4px;
+      color: rgba(15,31,31,.68);
+      font-weight: 800;
+      font-size: 12.8px;
+    }
+
+    .jm-labelForm{
+      font-weight: 900;
+      color: rgba(15,31,31,.80);
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .jm-input{
+      border-radius: 14px !important;
+      border: 1px solid rgba(16,38,38,.12) !important;
+      background: rgba(255,255,255,.80) !important;
+      color: var(--text-dark) !important;
+      font-weight: 700;
+      box-shadow: none !important;
+    }
+    .jm-input:focus{
+      border-color: rgba(47,111,112,.28) !important;
+      box-shadow: 0 0 0 4px rgba(47,111,112,.12) !important;
+    }
+
+    .jm-orderHint{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.60);
+      border: 1px solid rgba(16,38,38,.10);
+      color: rgba(15,31,31,.72);
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .jm-orderDot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(23,63,64,.35);
+      box-shadow: inset 0 0 0 2px rgba(23,63,64,.20);
+      flex: 0 0 auto;
+    }
+
+    /* toast kecil */
+    .jm-orderToast{
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(23,63,64,.92);
+      color: #fff;
+      font-weight: 800;
+      font-size: 13px;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .18s ease, transform .18s ease;
+      pointer-events: none;
+    }
+    .jm-orderToast.is-show{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 992px){
+      .jm-orderCard{
+        position: static;
+        top: auto;
+      }
+      .jm-detailSplit{ grid-template-columns: 1fr; }
+      .jm-detailMedia img{ height: 280px; }
+    }
+
+
+    /* =========================
+   DETAIL PAGE (Homespace-like)
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+/* card base */
+.jm-pdCard{
+  border-radius: 20px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.82);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  overflow: hidden;
+}
+
+/* gallery */
+.jm-pdGallery{ padding: 14px; }
+.jm-pdCarousel{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(16,38,38,.10);
+  box-shadow: 0 16px 28px rgba(0,0,0,.07);
+}
+.jm-pdCarousel img{
+  height: 360px;
+  object-fit: cover;
+  display:block;
+}
+
+.jm-pdNav{ width: 52px; opacity: 1; }
+.jm-pdNavBtn{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display:grid;
+  place-items:center;
+  background: rgba(255,255,255,.86);
+  border: 1px solid rgba(16,38,38,.12);
+  box-shadow: 0 16px 28px rgba(0,0,0,.08);
+  color: #173f40;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.jm-pdThumbs{
+  margin-top: 12px;
+  display:flex;
+  gap: 10px;
+  overflow:auto;
+  padding-bottom: 4px;
+}
+.jm-pdThumb{
+  border: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 14px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  width: 86px;
+  height: 58px;
+  border: 2px solid rgba(16,38,38,.12);
+  transition: transform .15s ease, border-color .15s ease;
+}
+.jm-pdThumb img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+.jm-pdThumb:hover{ transform: translateY(-1px); }
+.jm-pdThumb.active{ border-color: rgba(23,63,64,.55); }
+
+/* title area */
+.jm-pdId{
+  margin-left: auto;
+  font-weight: 900;
+  font-size: 12px;
+  color: rgba(15,31,31,.55);
+}
+
+.jm-pdTitle{
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.jm-pdMeta{
+  margin-top: 6px;
+  color: rgba(15,31,31,.70);
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.jm-pdPriceWrap{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.jm-pdPrice{
+  flex: 1 1 280px;
+  border-radius: 16px;
+  background: rgba(23,63,64,.10);
+  border: 1px solid rgba(23,63,64,.14);
+  padding: 14px 14px;
+}
+.jm-pdPrice__main{
+  color: #173f40;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+.jm-pdPrice__sub{
+  margin-top: 4px;
+  color: rgba(15,31,31,.70);
+  font-weight: 700;
+  font-size: 12.8px;
+  line-height: 1.5;
+}
+
+.jm-pdMiniNote{
+  flex: 1 1 210px;
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  border-radius: 16px;
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(16,38,38,.10);
+  padding: 14px 14px;
+  color: rgba(15,31,31,.72);
+  font-weight: 800;
+  font-size: 13px;
+}
+.jm-pdDot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.35);
+  box-shadow: inset 0 0 0 2px rgba(23,63,64,.20);
+}
+
+/* tiles */
+.jm-pdTiles{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.jm-pdTile{
+  border-radius: 16px;
+  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(16,38,38,.10);
+  padding: 12px 12px;
+  text-align:center;
+}
+.jm-pdTile__num{
+  color: #173f40;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 15px;
+}
+.jm-pdTile__label{
+  margin-top: 4px;
+  color: rgba(15,31,31,.62);
+  font-weight: 800;
+  font-size: 12.5px;
+}
+
+/* sections */
+.jm-pdSectionTitle{
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 18px;
+}
+.jm-pdText{
+  margin-top: 10px;
+  color: rgba(15,31,31,.72);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.jm-pdBox{
+  border-radius: 18px;
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(16,38,38,.10);
+  padding: 14px 14px;
+}
+.jm-pdBox__title{
+  font-weight: 900;
+  color: var(--text-dark);
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+.jm-pdList{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(15,31,31,.70);
+  font-weight: 700;
+  font-size: 13.4px;
+  line-height: 1.75;
+}
+.jm-pdDivider{
+  height: 1px;
+  background: rgba(16,38,38,.10);
+  margin: 16px 0;
+}
+
+.jm-pdSpecLine{
+  display:flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(16,38,38,.10);
+  margin-bottom: 10px;
+}
+.jm-pdSpecKey{
+  color: rgba(15,31,31,.68);
+  font-weight: 800;
+  font-size: 13px;
+}
+.jm-pdSpecVal{
+  color: var(--text-dark);
+  font-weight: 900;
+  font-size: 13px;
+}
+
+/* plan */
+.jm-pdPlan{
+  border-radius: 18px;
+  overflow:hidden;
+  border: 1px solid rgba(16,38,38,.10);
+  box-shadow: 0 14px 26px rgba(0,0,0,.06);
+  margin-top: 12px;
+}
+.jm-pdPlan img{
+  width:100%;
+  height: 280px;
+  object-fit: cover;
+  display:block;
+}
+.jm-pdPlanCap{
+  margin-top: 10px;
+  color: rgba(15,31,31,.72);
+  font-weight: 700;
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+
+/* facts */
+.jm-pdFacts{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.jm-pdFact{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  border-radius: 16px;
+  background: rgba(255,255,255,.68);
+  border: 1px solid rgba(16,38,38,.10);
+  padding: 12px 12px;
+}
+.jm-pdFact__icon{
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background: rgba(23,63,64,.10);
+  border: 1px solid rgba(23,63,64,.12);
+  font-size: 18px;
+}
+.jm-pdFact__k{
+  color: rgba(15,31,31,.62);
+  font-weight: 800;
+  font-size: 12.5px;
+}
+.jm-pdFact__v{
+  color: var(--text-dark);
+  font-weight: 900;
+  font-size: 12.8px;
+}
+
+/* sidebar */
+.jm-pdSideSticky{ top: 110px; }
+.jm-sideCard{
+  border-radius: 20px;
+  border: 1px solid rgba(16,38,38,.10);
+  background:
+    radial-gradient(520px 220px at 20% 0%, rgba(207,227,225,.55), transparent 55%),
+    rgba(238,244,244,.85);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  padding: 16px;
+}
+.jm-sideTitle{
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 14.5px;
+}
+
+/* agent */
+.jm-agent{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+}
+.jm-agent__img{
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,.85);
+  box-shadow: 0 12px 22px rgba(0,0,0,.08);
+}
+.jm-agent__name{
+  font-weight: 900;
+  color: var(--text-dark);
+  font-size: 13.5px;
+}
+.jm-agent__role{
+  margin-top: 2px;
+  font-weight: 800;
+  color: rgba(15,31,31,.62);
+  font-size: 12.5px;
+}
+
+/* mini toast */
+.jm-miniToast{
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(23,63,64,.92);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .18s ease, transform .18s ease;
+  pointer-events: none;
+}
+.jm-miniToast.is-show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* cost */
+.jm-costRow{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  color: rgba(15,31,31,.70);
+  font-weight: 800;
+  font-size: 13px;
+}
+.jm-costInput{
+  width: 150px;
+  text-align: right;
+  padding-right: 12px;
+}
+.jm-costTotal{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(16,38,38,.10);
+  font-weight: 900;
+  color: #173f40;
+}
+.jm-costHint{
+  margin-top: 8px;
+  color: rgba(15,31,31,.62);
+  font-weight: 700;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+/* similar items */
+.jm-simItem{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 10px 10px;
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(16,38,38,.10);
+  margin-top: 10px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.jm-simItem:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.08);
+}
+.jm-simItem img{
+  width: 54px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.jm-simTitle{
+  color: var(--text-dark);
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 1.2;
+}
+.jm-simMeta{
+  margin-top: 4px;
+  color: rgba(15,31,31,.62);
+  font-weight: 800;
+  font-size: 12.2px;
+}
+
+/* save state */
+#jmSaveBtn.is-saved{
+  background: rgba(23,63,64,.12) !important;
+  border: 1px solid rgba(23,63,64,.18) !important;
+  color: #173f40 !important;
+}
+
+/* responsive */
+@media (max-width: 992px){
+  .jm-pdCarousel img{ height: 280px; }
+  .jm-pdTiles{ grid-template-columns: repeat(2, 1fr); }
+  .jm-pdFacts{ grid-template-columns: repeat(2, 1fr); }
+  .jm-costInput{ width: 140px; }
+}
+@media (max-width: 576px){
+  .jm-pdThumb{ width: 78px; height: 54px; }
+}
+/* ===== Tablet ===== */
+@media (max-width: 992px){
+  .jm-pdFacts{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 576px){
+  /* jadi 2 kolom biar lega */
+  .jm-pdFacts{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  /* card lebih compact */
+  .jm-pdFact{
+    padding: 10px 10px;
+    border-radius: 14px;
+    min-height: 58px;
+  }
+
+  .jm-pdFact__icon{
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    font-size: 17px;
+  }
+
+  .jm-pdFact__k{ font-size: 12.8px; }
+  .jm-pdFact__v{ font-size: 12.2px; }
+
+  /* tombol jadi full width biar tidak sempit */
+  .jm-pdCard .d-flex.flex-wrap.gap-2{
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  .jm-pdCard .d-flex.flex-wrap.gap-2 > a{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ===== Extra small (HP kecil banget) ===== */
+@media (max-width: 380px){
+  .jm-pdFacts{
+    grid-template-columns: 1fr;
+  }
+  .jm-pdFact{
+    min-height: auto;
+  }
+}
+
+/* =========================
+   FOOTER (serasi tema hero)
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+.jm-footer{
+  padding: 10px 0 28px;
+}
+
+.jm-footerCard{
+  border-radius: 22px;
+  border: 1px solid rgba(16,38,38,.10);
+  background:
+    radial-gradient(800px 320px at 20% 0%, rgba(207,227,225,.55), transparent 55%),
+    rgba(238,244,244,.88);
+  box-shadow: 0 18px 38px rgba(0,0,0,.08);
+  padding: 22px;
+  overflow: hidden;
+}
+
+/* brand */
+.jm-footerBrand{
+  text-decoration: none;
+}
+.jm-footerBrand__text{
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+}
+
+/* desc */
+.jm-footerDesc{
+  margin: 0;
+  color: rgba(15,31,31,.72);
+  font-size: 13.6px;
+  line-height: 1.75;
+  max-width: 420px;
+}
+
+/* title */
+.jm-footerTitle{
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* list */
+.jm-footerList{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.jm-footerList a{
+  text-decoration: none;
+  color: rgba(15,31,31,.72);
+  font-weight: 800;
+  font-size: 13.2px;
+  transition: transform .15s ease, color .15s ease, opacity .15s ease;
+}
+.jm-footerList a:hover{
+  color: var(--text-dark);
+  transform: translateX(2px);
+}
+
+/* contact block */
+.jm-footerContact{
+  display: grid;
+  gap: 10px;
+  padding: 12px 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(255,255,255,.65);
+}
+
+.jm-footerContact__item{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: rgba(15,31,31,.72);
+  font-weight: 800;
+  font-size: 13.2px;
+  line-height: 1.6;
+}
+.jm-footerContact__item a{
+  color: rgba(15,31,31,.72);
+  text-decoration: none;
+}
+.jm-footerContact__item a:hover{
+  color: var(--text-dark);
+  text-decoration: underline;
+}
+
+.jm-footerContact__dot{
+  width: 10px;
+  height: 10px;
+  margin-top: 6px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.30);
+  box-shadow: inset 0 0 0 2px rgba(23,63,64,.18);
+  flex: 0 0 auto;
+}
+
+.jm-footerMiniNote{
+  color: rgba(15,31,31,.60);
+  font-size: 12.5px;
+  font-weight: 800;
+}
+
+/* bottom bar */
+.jm-footerBottom{
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(16,38,38,.10);
+}
+
+.jm-footerCopy{
+  color: rgba(15,31,31,.65);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.jm-footerBottomLinks{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.jm-footerBottomLinks a{
+  color: rgba(15,31,31,.72);
+  font-weight: 900;
+  font-size: 13px;
+  text-decoration: none;
+}
+.jm-footerBottomLinks a:hover{
+  color: var(--text-dark);
+  text-decoration: underline;
+}
+.jm-footerSep{
+  color: rgba(15,31,31,.35);
+  font-weight: 900;
+}
+
+/* responsive */
+@media (max-width: 576px){
+  .jm-footerCard{ padding: 18px; }
+  .jm-footerBottom{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .jm-footerActions > a{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =========================
+   BLOG PAGE (layout mirip contoh)
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+.jm-blogHead{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(238,244,244,.75);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  padding: 14px 16px;
+}
+
+.jm-blogHead__inner{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.jm-blogHead__title{
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 20px;
+}
+
+.jm-blogHead__crumbs{
+  font-weight: 900;
+  font-size: 12.5px;
+  color: rgba(15,31,31,.62);
+}
+.jm-blogHead__crumbs a{
+  color: rgba(15,31,31,.72);
+  text-decoration:none;
+}
+.jm-blogHead__crumbs a:hover{ text-decoration: underline; }
+.jm-blogHead__sep{ margin: 0 8px; opacity: .7; }
+
+/* chips */
+.jm-chip{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.12);
+  border: 1px solid rgba(23,63,64,.16);
+  color: #173f40;
+  font-weight: 900;
+  font-size: 12px;
+}
+.jm-chip--cat{
+  position:absolute;
+  left: 14px;
+  top: 14px;
+  z-index: 2;
+  background: rgba(23,63,64,.92);
+  border-color: rgba(23,63,64,.15);
+  color: #fff;
+}
+
+/* HERO POST */
+.jm-postHero{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(255,255,255,.65);
+  box-shadow: 0 14px 30px rgba(0,0,0,.08);
+  overflow:hidden;
+}
+
+.jm-postHero__media{
+  position:relative;
+  display:block;
+  height: 340px;
+  overflow:hidden;
+  background: #dfeceb;
+}
+.jm-postHero__media img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+  transform: scale(1.02);
+  transition: transform .25s ease;
+}
+.jm-postHero:hover .jm-postHero__media img{ transform: scale(1.05); }
+
+.jm-postHero__body{
+  padding: 16px 16px 18px;
+}
+
+.jm-postHero__meta{
+  color: rgba(15,31,31,.65);
+  font-weight: 900;
+  font-size: 12.5px;
+}
+.jm-metaSep{ margin: 0 8px; opacity:.7; }
+
+.jm-postHero__title{
+  margin: 10px 0 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 24px;
+  line-height: 1.25;
+}
+.jm-postHero__title a{
+  color: var(--text-dark);
+  text-decoration:none;
+}
+.jm-postHero__title a:hover{ text-decoration: underline; }
+
+.jm-postHero__excerpt{
+  margin: 10px 0 0;
+  color: rgba(15,31,31,.72);
+  font-size: 13.8px;
+  line-height: 1.75;
+  max-width: 62ch;
+}
+
+.jm-postHero__author{
+  margin-top: 12px;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  color: rgba(15,31,31,.72);
+  font-weight: 900;
+  font-size: 12.8px;
+}
+.jm-authorDot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.35);
+  box-shadow: inset 0 0 0 2px rgba(23,63,64,.18);
+}
+
+/* MINI POST (dua kartu di bawah hero) */
+.jm-postMini{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(255,255,255,.65);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  overflow:hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.jm-postMini:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.08);
+}
+.jm-postMini__media{
+  position:relative;
+  display:block;
+  height: 170px;
+  background: #dfeceb;
+}
+.jm-postMini__media img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+  transition: transform .25s ease;
+}
+.jm-postMini:hover .jm-postMini__media img{ transform: scale(1.04); }
+
+.jm-postMini__body{ padding: 14px 14px 16px; }
+
+.jm-postMini__meta{
+  color: rgba(15,31,31,.65);
+  font-weight: 900;
+  font-size: 12.2px;
+}
+.jm-postMini__title{
+  margin: 10px 0 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.jm-postMini__title a{ color: var(--text-dark); text-decoration:none; }
+.jm-postMini__title a:hover{ text-decoration: underline; }
+
+.jm-postMini__author{
+  margin-top: 12px;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  color: rgba(15,31,31,.72);
+  font-weight: 900;
+  font-size: 12.6px;
+}
+
+/* POST CARD (grid bawah) */
+.jm-postCard{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(255,255,255,.65);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  overflow:hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.jm-postCard:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.08);
+}
+
+.jm-postCard__media{
+  position:relative;
+  display:block;
+  height: 170px;
+  background: #dfeceb;
+}
+.jm-postCard__media img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+  transition: transform .25s ease;
+}
+.jm-postCard:hover .jm-postCard__media img{ transform: scale(1.04); }
+
+.jm-postCard__body{ padding: 14px 14px 16px; }
+
+.jm-postCard__cat{
+  color: rgba(15,31,31,.55);
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.jm-postCard__title{
+  margin: 10px 0 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 15.5px;
+  line-height: 1.3;
+}
+.jm-postCard__title a{ color: var(--text-dark); text-decoration:none; }
+.jm-postCard__title a:hover{ text-decoration: underline; }
+
+.jm-postCard__meta{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(16,38,38,.14);
+}
+.jm-avatar{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.12);
+  border: 1px solid rgba(23,63,64,.16);
+  flex: 0 0 auto;
+}
+.jm-postCard__by{
+  font-weight: 900;
+  color: rgba(15,31,31,.78);
+  font-size: 12.8px;
+}
+.jm-postCard__date{
+  color: rgba(15,31,31,.55);
+  font-weight: 900;
+  font-size: 12px;
+}
+
+/* Sidebar card */
+.jm-sideCard{
+  border-radius: 18px;
+  border: 1px solid rgba(16,38,38,.10);
+  background:
+    radial-gradient(520px 220px at 20% 0%, rgba(207,227,225,.55), transparent 55%),
+    rgba(238,244,244,.85);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+  padding: 14px;
+  position: sticky;
+  top: 110px; /* aman dengan navbar sticky */
+}
+
+.jm-sideTabs{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.jm-sideTab{
+  border: 1px solid rgba(16,38,38,.12);
+  background: rgba(255,255,255,.70);
+  color: rgba(15,31,31,.72);
+  font-weight: 900;
+  font-size: 12.5px;
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease, color .15s ease;
+}
+.jm-sideTab:hover{ transform: translateY(-1px); }
+.jm-sideTab.is-active{
+  background: rgba(23,63,64,.92);
+  border-color: rgba(23,63,64,.18);
+  color: #fff;
+}
+
+.jm-sideTitle{
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 14px;
+}
+
+.jm-sideList{
+  margin-top: 12px;
+  display: none;
+  gap: 12px;
+}
+.jm-sideList.is-show{
+  display: grid;
+}
+
+.jm-sideItem{
+  display:flex;
+  gap: 12px;
+  align-items: center;
+  text-decoration:none;
+  border-radius: 16px;
+  border: 1px solid rgba(16,38,38,.10);
+  background: rgba(255,255,255,.65);
+  padding: 10px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.jm-sideItem:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(0,0,0,.07);
+}
+
+.jm-sideThumb{
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: #dfeceb center/cover no-repeat;
+  border: 1px solid rgba(16,38,38,.10);
+  flex: 0 0 auto;
+}
+
+.jm-sideTxt{ min-width: 0; }
+.jm-sideH{
+  margin-top: 6px;
+  color: var(--text-dark);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 12.8px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.jm-sideBy{
+  margin-top: 6px;
+  color: rgba(15,31,31,.55);
+  font-weight: 900;
+  font-size: 12px;
+}
+.jm-pill{
+  display:inline-flex;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(23,63,64,.12);
+  border: 1px solid rgba(23,63,64,.16);
+  color:#173f40;
+  font-weight: 900;
+  font-size: 11.5px;
+}
+
+/* Pagination */
+.jm-pagination{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.jm-pageBtn{
+  text-decoration:none;
+  font-weight: 900;
+  font-size: 13px;
+  color: rgba(15,31,31,.78);
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(16,38,38,.12);
+  background: rgba(255,255,255,.65);
+}
+.jm-pageBtn:hover{ color: var(--text-dark); }
+
+.jm-pages{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.jm-pageNum{
+  width: 34px;
+  height: 34px;
+  display:grid;
+  place-items:center;
+  border-radius: 10px;
+  text-decoration:none;
+  font-weight: 900;
+  font-size: 13px;
+  color: rgba(15,31,31,.75);
+  border: 1px solid rgba(16,38,38,.12);
+  background: rgba(255,255,255,.65);
+}
+.jm-pageNum:hover{ color: var(--text-dark); }
+.jm-pageNum.is-active{
+  background: rgba(23,63,64,.92);
+  color: #fff;
+  border-color: rgba(23,63,64,.18);
+}
+.jm-pageDots{
+  color: rgba(15,31,31,.55);
+  font-weight: 900;
+}
+
+/* responsive tweaks */
+@media (max-width: 992px){
+  .jm-sideCard{
+    position: static;
+    top: auto;
+  }
+}
+@media (max-width: 576px){
+  .jm-postHero__media{ height: 240px; }
+  .jm-postHero__title{ font-size: 20px; }
+}
+
+/* ===== Grid posts lebih proporsional & penuh ===== */
+
+/* Biar semua card tingginya rata (nggak kaku) */
+#blog .jm-postCard{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#blog .jm-postCard__body{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#blog .jm-postCard__meta{
+  margin-top: auto; /* push meta ke bawah -> card rapi */
+}
+
+/* Atur lebar kolomnya supaya pas.
+   - Desktop besar: 3 kolom rapat (tanpa sisa)
+   - Laptop: 2 kolom
+   - Mobile: 1 kolom
+*/
+@media (min-width: 1200px){
+  /* override col-xl-4 agar benar-benar 3 kolom rapih */
+  #blog .row.g-4 > .col-xl-4{
+    flex: 0 0 auto;
+    width: 33.333333%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px){
+  /* jadi 2 kolom agar tidak ada sisa */
+  #blog .row.g-4 > .col-md-6{
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+/* jarak antar card biar mirip contoh */
+#blog .row.g-4{
+  --bs-gutter-x: 18px;
+  --bs-gutter-y: 18px;
+}
+@media (min-width: 1200px){
+  #blog .row.g-4{
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+  }
+}
+
+/* =========================
+   BLOG WIDTH + GRID FIX (3 kolom beneran)
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+/* 1) Perbesar container khusus halaman blog */
+.jm-page--blog .jm-wrap{
+  max-width: 1440px;          /* lebih besar dari 1280 biar “lega” */
+  padding-left: 14px;
+  padding-right: 14px;
+}
+@media (min-width: 992px){
+  .jm-page--blog .jm-wrap{
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+/* 2) Proporsi main vs sidebar (biar tidak ada ruang kosong kanan) */
+@media (min-width: 992px){
+  .jm-page--blog .col-lg-8{ width: 72%; flex: 0 0 auto; }
+  .jm-page--blog .col-lg-4{ width: 28%; flex: 0 0 auto; }
+}
+
+/* 3) Grid Posts: paksa jadi CSS Grid (lebih stabil dari bootstrap cols) */
+.jm-page--blog .jm-postGrid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));  /* 3 kolom penuh */
+  gap: 18px;
+  margin-top: 14px !important; /* biar rapi */
+}
+
+/* matikan efek lebar/padding dari col bootstrap di dalam grid */
+.jm-page--blog .jm-postGrid > [class*="col-"]{
+  width: auto !important;
+  max-width: none !important;
+  flex: none !important;
+  padding: 0 !important;      /* karena gap sudah di-handle grid */
+}
+
+/* 2 kolom di tablet/laptop */
+@media (max-width: 1199.98px){
+  .jm-page--blog .jm-postGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 1 kolom di HP */
+@media (max-width: 767.98px){
+  .jm-page--blog .jm-postGrid{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* 4) Pastikan card benar-benar melebar penuh */
+.jm-page--blog .jm-postCard{
+  width: 100%;
+  height: 100%;
+}
+
+/* 5) (Opsional biar makin “besar” kayak contoh) */
+.jm-page--blog .jm-postCard__title{
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+.jm-page--blog .jm-postCard__cat{
+  font-weight: 800;
+}
+
+/* 6) Sidebar card biar terasa “isi” dan tidak sempit */
+@media (min-width: 992px){
+  .jm-page--blog .jm-sideCard{
+    position: sticky;
+    top: 110px;
+  }
+}
+/* =========================
+   BLOG WIDTH FIX + POST GRID
+   Tempel di PALING BAWAH main.css
+   ========================= */
+
+/* Naikkan lebar container global biar nggak "kecil" */
+.jm-wrap{
+  max-width: 1280px; /* dari 1100 -> lebih lega */
+}
+
+/* Kalau layar sangat besar, biar tetap proporsional */
+@media (min-width: 1400px){
+  .jm-wrap{ max-width: 1320px; }
+}
+
+/* Biar padding kiri-kanan container nggak kebesaran */
+.jm-wrap{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* Grid posts: pastikan tiap kolom mengisi dan card tinggi konsisten */
+.jm-postGrid > [class*="col-"]{
+  display: flex;
+}
+
+.jm-postGrid .jm-postCard{
+  width: 100%;
+  height: 100%;
+}
+
+/* (Opsional) kalau kamu pengen cards lebih "gede" di desktop,
+   kecilkan gutter sedikit agar kolom terasa lebih lebar */
+@media (min-width: 1200px){
+  .jm-postGrid.row.g-4{
+    --bs-gutter-x: 1.25rem; /* default g-4 = 1.5rem, ini sedikit lebih rapat */
+  }
+}
+/* =========================================
+   FIX: GRID POSTS BLOG 3 KOLOM (FULL LEBAR)
+   Tempel PALING BAWAH main.css
+   ========================================= */
+
+/* 1) Ubah container row jadi CSS Grid beneran */
+#blog .jm-postGrid{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  margin-top: 14px !important;
+}
+
+/* 2) Matikan gutter Bootstrap (g-4 / row / col padding) */
+#blog .jm-postGrid.row{
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* 3) Kolom bootstrap di dalam grid: jangan ngatur lebar/padding lagi */
+#blog .jm-postGrid > [class*="col-"]{
+  width: auto !important;
+  max-width: none !important;
+  flex: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+}
+
+/* 4) Biar card memenuhi grid cell */
+#blog .jm-postGrid .jm-postCard{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* 5) Responsif: tablet 2 kolom, HP 1 kolom */
+@media (max-width: 1199.98px){
+  #blog .jm-postGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+}
+
+@media (max-width: 767.98px){
+  #blog .jm-postGrid{
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
+
+/* =========================================================
+   FIX FINAL: GRID POSTS 3 KOLOM FULL (khusus #blog .jm-postGrid)
+   Tempel PALING BAWAH main.css
+   ========================================================= */
+
+/* Paksa row jadi grid (mengalahkan display:flex dari Bootstrap .row) */
+#blog .jm-postGrid{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;                 /* jarak antar card */
+  margin-top: 16px !important;
+  align-items: stretch !important;
+}
+
+/* Matikan gutter + negative margin bawaan .row */
+#blog .jm-postGrid.row{
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* HAPUS efek col bootstrap di dalam grid (biar tidak mengecil) */
+#blog .jm-postGrid > [class*="col-"]{
+  width: auto !important;
+  max-width: none !important;
+  flex: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+}
+
+/* Card harus memenuhi cell grid */
+#blog .jm-postGrid .jm-postCard{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Biar card nggak terlihat "kecil": sedikit besarkan media + judul */
+#blog .jm-postGrid .jm-postCard__media{
+  height: 190px !important;
+}
+#blog .jm-postGrid .jm-postCard__title{
+  font-size: 16.5px !important;
+  line-height: 1.35 !important;
+}
+
+/* Tablet: 2 kolom */
+@media (max-width: 1199.98px){
+  #blog .jm-postGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+}
+
+/* HP: 1 kolom */
+@media (max-width: 767.98px){
+  #blog .jm-postGrid{
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  #blog .jm-postGrid .jm-postCard__media{
+    height: 180px !important;
+  }
+}
+
+/* =========================================================
+   BLOG GRID SECTION BARU (ANTI TABRAK CSS LAMA)
+   - Desktop: 3 kolom lebar penuh
+   - Tablet: 2 kolom
+   - HP: 1 kolom
+   ========================================================= */
+
+.jm-blogGridSection{
+  width: 100%;
+}
+
+/* Grid: lebar penuh, rapi, tidak sisa kanan */
+.jm-blogGrid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.jm-chip {
+  margin-top: 15px;
+}
+.jm-postCard__title a{
+  margin-top: 15px;
+}
+
+/* Jarak antara chip (di dalam media) dan isi body */
+.jm-postCard__body{
+  padding-top: 14px; /* kalau sebelumnya terasa mepet */
+}
+
+/* Jarak judul dari atas (lebih aman & konsisten) */
+.jm-postCard__title{
+  margin-top: 10px; /* jarak dari elemen di atasnya */
+}
+
+/* Jika kamu pakai .jm-postCard__cat, sekalian rapihin jaraknya */
+.jm-postCard__cat{
+  margin-bottom: 6px;
+}
+
+
+/* Tablet */
+@media (max-width: 1199.98px){
+  .jm-blogGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* HP */
+@media (max-width: 767.98px){
+  .jm-blogGrid{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* Biar card tinggi konsisten & isi terdorong rapi */
+.jm-blogGrid .jm-postCard{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.jm-blogGrid .jm-postCard__body{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.jm-blogGrid .jm-postCard__meta{
+  margin-top: auto;
+}
+
+/* Biar kartu lebih “besar” seperti contoh */
+.jm-blogGrid .jm-postCard__media{
+  height: 200px;
+}
+@media (max-width: 767.98px){
+  .jm-blogGrid .jm-postCard__media{
+    height: 185px;
+  }
+}
