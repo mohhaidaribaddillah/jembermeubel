@@ -22,13 +22,24 @@
   <main class="container jm-wrap py-4">
 
 <!-- NAVBAR (sticky + dropdown produk) -->
-<!-- NAVBAR (sticky + dropdown produk) -->
 <nav class="navbar navbar-expand-lg jm-navbar jm-navbarSticky sticky-top rounded-4 px-3 px-lg-4 py-3">
   <div class="container-fluid px-0">
 
-    <a class="navbar-brand jm-brand d-flex align-items-center gap-2" href="index.html">
-      <span class="jm-brand__dot"></span>
-      <span>Jembermeubel</span>
+    <a class="navbar-brand jm-brand d-flex align-items-center gap-2" href="index.html" aria-label="Jembermeubel">
+      <!-- LOGO ONLY (SVG inline) -->
+      <svg width="40" height="40" viewBox="0 0 64 64" role="img" aria-hidden="true" style="display:block">
+        <!-- circle -->
+        <circle cx="32" cy="32" r="30" fill="currentColor" opacity="0.95"></circle>
+        <!-- inner dot accent -->
+        <circle cx="48" cy="18" r="5" fill="#ffffff" opacity="0.9"></circle>
+
+        <!-- JM letters -->
+        <path d="M18 44V20h6v24c0 2-1 3-3 3s-3-1-3-3z" fill="#ffffff"></path>
+        <path d="M28 44V20h6l6 12 6-12h6v24h-6V31l-6 12-6-12v13h-6z" fill="#ffffff"></path>
+      </svg>
+
+      <!-- hidden text (biar SEO/aksesibilitas aman, tapi tidak tampil) -->
+      <span class="visually-hidden">Jembermeubel</span>
     </a>
 
     <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jmNav"
@@ -61,6 +72,7 @@
         </li>
 
         <li class="nav-item"><a class="nav-link jm-navlink" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link jm-navlink" href="properti.html">Properti</a></li>
       </ul>
 
       <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-3">
@@ -170,7 +182,7 @@
         <div class="col-12 col-lg-6">
           <div class="jm-aboutMedia jm-aboutMedia--tall">
             <img
-              src="https://images.unsplash.com/photo-1549497538-303791108f95?auto=format&fit=crop&w=1600&q=80"
+              src="assets/img/raksepatu.jpeg"
               alt="Detail finishing furniture"
               loading="lazy">
           </div>
@@ -268,159 +280,73 @@
       </div>
     </section>
 
- <!-- TESTIMONI -->
-<section id="testimoni" class="jm-section mt-4 mt-lg-5">
+    <!-- GALERI / PROJECT -->
+<section id="galeri" class="jm-section mt-4 mt-lg-5">
   <div class="jm-sectionHead jm-sectionHead--center mb-3 mb-lg-4">
-    <h2 class="jm-sectionTitle">Testimoni</h2>
-    <p class="jm-sectionDesc">Review singkat dari pembeli</p>
+    <h2 class="jm-sectionTitle">Galeri</h2>
+    <p class="jm-sectionDesc">
+      Inspirasi hasil produksi dan detail finishing. Gunakan filter untuk lihat kategori.
+    </p>
   </div>
 
-  <!-- Carousel -->
-  <div id="jmTestiCarousel" class="carousel slide jm-testiCarousel" data-bs-ride="carousel" data-bs-interval="4500">
-    <!-- Dots -->
-    <div class="carousel-indicators jm-testiDots">
-      <button type="button" data-bs-target="#jmTestiCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#jmTestiCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#jmTestiCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  <!-- Filter Tabs -->
+  <div class="jm-galleryTabs mb-3 mb-lg-4" role="tablist" aria-label="Filter galeri">
+    <button class="jm-tab is-active" type="button" data-filter="all">Semua</button>
+    <button class="jm-tab" type="button" data-filter="kursi">Kursi</button>
+    <button class="jm-tab" type="button" data-filter="meja">Meja</button>
+    <button class="jm-tab" type="button" data-filter="lemari">Lemari</button>
+    <button class="jm-tab" type="button" data-filter="ruang">Ruang Tamu</button>
+    <button class="jm-tab" type="button" data-filter="finishing">Finishing</button>
+  </div>
+
+  <!-- Grid -->
+  <div class="row g-3 jm-galleryGrid" id="jmGalleryGrid">
+    <!-- item: kursi -->
+    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="kursi ruang">
+      <a class="jm-gallery" href="" aria-label="Detail project kursi">
+        <img src="assets/img/kursi22.jpeg" alt="Project Kursi Tamu" loading="lazy">
+        <span class="jm-galleryTag">Kursi</span>
+      </a>
     </div>
 
-    <div class="carousel-inner">
+    <!-- item: meja -->
+    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="meja finishing">
+      <a class="jm-gallery" href="" aria-label="Detail project meja">
+        <img src="assets/img/mejabelajar.jpeg" alt="Project Meja Makan" loading="lazy">
+        <span class="jm-galleryTag">Meja</span>
+      </a>
+    </div>
 
-      <!-- Slide 1 (2 cards desktop) -->
-      <div class="carousel-item active">
-        <div class="row g-4 justify-content-center">
-          <div class="col-12 col-lg-6">
-            <article class="jm-review card h-100">
-              <div class="jm-review__avatarWrap" aria-hidden="true">
-                <img class="jm-review__avatar" src="https://i.pravatar.cc/96?img=12" alt="">
-              </div>
+    <!-- item: lemari -->
+    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="lemari finishing">
+      <a class="jm-gallery" href="" aria-label="Detail project lemari">
+        <img src="assets/img/lemari1.jpeg" alt="Project Lemari" loading="lazy">
+        <span class="jm-galleryTag">Lemari</span>
+      </a>
+    </div>
 
-              <div class="card-body">
-                <div class="jm-review__head">
-                  <div class="jm-review__name">Ayu Prameswari</div>
-                  <div class="jm-review__role">Pembeli • Surabaya</div>
-                  <div class="jm-review__stars" aria-hidden="true">★★★★★</div>
-                </div>
+    <!-- item: ruang tamu -->
+    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="ruang kursi">
+      <a class="jm-gallery" href="" aria-label="Detail project ruang tamu">
+        <img src="assets/img/mejamakan.jpeg" alt="Project Ruang Tamu" loading="lazy">
+        <span class="jm-galleryTag">Ruang Tamu</span>
+      </a>
+    </div>
 
-                <p class="jm-review__text">
-                  Finishing rapi, komunikasinya enak. Pesanan sesuai request dan hasilnya bikin ruang tamu jadi lebih hangat.
-                </p>
-              </div>
-            </article>
-          </div>
+    <!-- item: finishing -->
+    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="finishing">
+      <a class="jm-gallery" href="" aria-label="Detail project finishing">
+        <img src="assets/img/kasur.jpeg" alt="Detail Finishing" loading="lazy">
+        <span class="jm-galleryTag">Finishing</span>
+      </a>
+    </div>
 
-          <div class="col-12 col-lg-6">
-            <article class="jm-review card h-100">
-              <div class="jm-review__avatarWrap" aria-hidden="true">
-                <img class="jm-review__avatar" src="https://i.pravatar.cc/96?img=32" alt="">
-              </div>
-
-              <div class="card-body">
-                <div class="jm-review__head">
-                  <div class="jm-review__name">Fajar N.</div>
-                  <div class="jm-review__role">Pembeli • Malang</div>
-                  <div class="jm-review__stars" aria-hidden="true">★★★★★</div>
-                </div>
-
-                <p class="jm-review__text">
-                  Meja makan kokoh, warna sesuai. Packing aman dan pengiriman tepat waktu. Recommended untuk custom.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="row g-4 justify-content-center">
-          <div class="col-12 col-lg-6">
-            <article class="jm-review card h-100">
-              <div class="jm-review__avatarWrap" aria-hidden="true">
-                <img class="jm-review__avatar" src="https://i.pravatar.cc/96?img=56" alt="">
-              </div>
-
-              <div class="card-body">
-                <div class="jm-review__head">
-                  <div class="jm-review__name">Rina A.</div>
-                  <div class="jm-review__role">Pembeli • Jember</div>
-                  <div class="jm-review__stars" aria-hidden="true">★★★★★</div>
-                </div>
-
-                <p class="jm-review__text">
-                  Bisa custom ukuran, cocok buat ruang kecil. Hasilnya presisi dan finishingnya halus banget.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-12 col-lg-6">
-            <article class="jm-review card h-100">
-              <div class="jm-review__avatarWrap" aria-hidden="true">
-                <img class="jm-review__avatar" src="https://i.pravatar.cc/96?img=45" alt="">
-              </div>
-
-              <div class="card-body">
-                <div class="jm-review__head">
-                  <div class="jm-review__name">Dina S.</div>
-                  <div class="jm-review__role">Pembeli • Sidoarjo</div>
-                  <div class="jm-review__stars" aria-hidden="true">★★★★★</div>
-                </div>
-
-                <p class="jm-review__text">
-                  Admin fast response, proses jelas. Barang datang mulus dan tampilannya premium untuk harga segini.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="row g-4 justify-content-center">
-          <div class="col-12 col-lg-6">
-            <article class="jm-review card h-100">
-              <div class="jm-review__avatarWrap" aria-hidden="true">
-                <img class="jm-review__avatar" src="https://i.pravatar.cc/96?img=7" alt="">
-              </div>
-
-              <div class="card-body">
-                <div class="jm-review__head">
-                  <div class="jm-review__name">Bagus R.</div>
-                  <div class="jm-review__role">Pembeli • Banyuwangi</div>
-                  <div class="jm-review__stars" aria-hidden="true">★★★★★</div>
-                </div>
-
-                <p class="jm-review__text">
-                  Detail sudut rapi, material solid. Enak banget buat jadi statement piece di rumah.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-12 col-lg-6">
-            <article class="jm-review card h-100">
-              <div class="jm-review__avatarWrap" aria-hidden="true">
-                <img class="jm-review__avatar" src="https://i.pravatar.cc/96?img=15" alt="">
-              </div>
-
-              <div class="card-body">
-                <div class="jm-review__head">
-                  <div class="jm-review__name">Salsa N.</div>
-                  <div class="jm-review__role">Pembeli • Kediri</div>
-                  <div class="jm-review__stars" aria-hidden="true">★★★★★</div>
-                </div>
-
-                <p class="jm-review__text">
-                  Bisa request finishing duco, hasilnya bersih. Terlihat mahal dan sesuai interior.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
+    <!-- item: kursi / finishing -->
+    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="kursi finishing">
+      <a class="jm-gallery" href="" aria-label="Detail project kursi finishing">
+        <img src="assets/img/buffet.jpeg" alt="Project Kursi & Finishing" loading="lazy">
+        <span class="jm-galleryTag">Kursi</span>
+      </a>
     </div>
   </div>
 </section>
@@ -450,9 +376,6 @@
                href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
                target="_blank" rel="noopener">
               Konsultasi WhatsApp
-            </a>
-            <a class="btn jm-btn jm-btn--soft rounded-pill px-4 py-2" href="index.html#galeri">
-              Lihat Galeri
             </a>
           </div>
         </div>
@@ -495,13 +418,6 @@
                   <span class="jm-footerContact__dot" aria-hidden="true"></span>
                   <span>Pengiriman: <b>Seluruh Indonesia</b></span>
                 </div>
-                <div class="jm-footerContact__item">
-                  <span class="jm-footerContact__dot" aria-hidden="true"></span>
-                  <a href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
-                     target="_blank" rel="noopener">
-                    WhatsApp: <b>+62 895-3696-9300</b>
-                  </a>
-                </div>
               </div>
 
               <div class="jm-footerMiniNote mt-3">
@@ -535,6 +451,39 @@
 <script>
   // Tahun otomatis
   document.getElementById("jmYear").textContent = new Date().getFullYear();
+</script>
+
+  <script>
+(function(){
+  const tabs = document.querySelectorAll('#galeri .jm-tab');
+  const items = document.querySelectorAll('#galeri .jm-galleryItem');
+
+  if(!tabs.length || !items.length) return;
+
+  function setActive(tab){
+    tabs.forEach(t => t.classList.remove('is-active'));
+    tab.classList.add('is-active');
+  }
+
+  function applyFilter(filter){
+    items.forEach(item => {
+      const tags = (item.getAttribute('data-filter') || '').toLowerCase();
+      const match = filter === 'all' || tags.includes(filter);
+      item.classList.toggle('is-hidden', !match);
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const filter = (tab.getAttribute('data-filter') || 'all').toLowerCase();
+      setActive(tab);
+      applyFilter(filter);
+    });
+  });
+
+  // default
+  applyFilter('all');
+})();
 </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
