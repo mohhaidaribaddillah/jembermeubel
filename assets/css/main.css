@@ -3639,3 +3639,135 @@ button.btn.jm-btn.jm-btn--outline:focus{
     height: 185px;
   }
 }
+
+/* ==============================
+   PROPERTIES/PRODUK PAGE (jm-props2-*)
+   ============================== */
+.jm-props2-logo{ display:block; }
+
+/* Head */
+.jm-props2-head{
+  background: rgba(0,0,0,.03);
+  border-radius: 24px;
+  padding: 16px 16px;
+}
+.jm-props2-title{
+  font-weight: 900;
+  margin: 0;
+}
+.jm-props2-sub{
+  font-size: 14px;
+  opacity: .75;
+}
+.jm-props2-crumbs{
+  font-size: 14px;
+  opacity: .75;
+}
+.jm-props2-crumbs a{ text-decoration: none; }
+.jm-props2-sep{ margin: 0 8px; opacity: .6; }
+
+/* Search */
+.jm-props2-searchCard{
+  background:#fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+  padding: 12px;
+}
+.jm-props2-searchInput{
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 14px;
+  padding: 12px 14px;
+  height: 48px;
+}
+.jm-props2-searchBtn{
+  height: 48px;
+  border-radius: 14px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Meta line */
+.jm-props2-found{ font-weight: 900; }
+.jm-props2-hint{ font-size: 14px; opacity: .75; }
+
+/* Card (compact, biar tidak panjang kebawah) */
+.jm-props2-card{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  transition: transform .18s ease, box-shadow .18s ease;
+  height: 100%;
+}
+.jm-props2-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.12);
+}
+
+/* Foto dibuat "standart" (tidak terlalu tinggi) */
+.jm-props2-media{
+  position: relative;
+  height: 160px;          /* kontrol tinggi foto */
+  background: #f3f3f3;
+  overflow: hidden;
+}
+.jm-props2-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Badges */
+.jm-props2-badges{
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.jm-props2-badge{
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.06);
+  backdrop-filter: blur(10px);
+}
+.jm-props2-badge--soft{
+  opacity: .9;
+}
+
+/* Body (ringkas) */
+.jm-props2-body{
+  padding: 12px 14px 14px;
+}
+.jm-props2-price{
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.jm-props2-name{
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.jm-props2-mini{
+  font-size: 13px;
+  opacity: .75;
+}
+
+/* Responsive kecil: foto lebih pendek */
+@media (max-width: 575.98px){
+  .jm-props2-media{ height: 140px; }
+  .jm-props2-searchBtn{ width: 100%; }
+}
