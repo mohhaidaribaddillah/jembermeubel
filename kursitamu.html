@@ -25,9 +25,21 @@
 <nav class="navbar navbar-expand-lg jm-navbar jm-navbarSticky sticky-top rounded-4 px-3 px-lg-4 py-3">
   <div class="container-fluid px-0">
 
-    <a class="navbar-brand jm-brand d-flex align-items-center gap-2" href="index.html">
-      <span class="jm-brand__dot"></span>
-      <span>Jembermeubel</span>
+    <a class="navbar-brand jm-brand d-flex align-items-center gap-2" href="index.html" aria-label="Jembermeubel">
+      <!-- LOGO ONLY (SVG inline) -->
+      <svg width="40" height="40" viewBox="0 0 64 64" role="img" aria-hidden="true" style="display:block">
+        <!-- circle -->
+        <circle cx="32" cy="32" r="30" fill="currentColor" opacity="0.95"></circle>
+        <!-- inner dot accent -->
+        <circle cx="48" cy="18" r="5" fill="#ffffff" opacity="0.9"></circle>
+
+        <!-- JM letters -->
+        <path d="M18 44V20h6v24c0 2-1 3-3 3s-3-1-3-3z" fill="#ffffff"></path>
+        <path d="M28 44V20h6l6 12 6-12h6v24h-6V31l-6 12-6-12v13h-6z" fill="#ffffff"></path>
+      </svg>
+
+      <!-- hidden text (biar SEO/aksesibilitas aman, tapi tidak tampil) -->
+      <span class="visually-hidden">Jembermeubel</span>
     </a>
 
     <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jmNav"
@@ -60,6 +72,7 @@
         </li>
 
         <li class="nav-item"><a class="nav-link jm-navlink" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link jm-navlink" href="properti.html">Properti</a></li>
       </ul>
 
       <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-3">
@@ -114,7 +127,7 @@
                     <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1800&q=80" class="d-block w-100" alt="Kursi tamu 2">
                   </div>
                   <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc88?auto=format&fit=crop&w=1800&q=80" class="d-block w-100" alt="Kursi tamu 3">
+                    <img src="assets/img/kursi22.jpeg" class="d-block w-100" alt="Kursi tamu 3">
                   </div>
                   <div class="carousel-item">
                     <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1800&q=80" class="d-block w-100" alt="Kursi tamu 4">
@@ -138,7 +151,7 @@
                   <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=360&q=80" alt="">
                 </button>
                 <button class="jm-pdThumb" type="button" data-bs-target="#jmPdCarousel" data-bs-slide-to="2" aria-label="Thumbnail 3">
-                  <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc88?auto=format&fit=crop&w=360&q=80" alt="">
+                  <img src="assets/img/kursi22.jpeg" alt="">
                 </button>
                 <button class="jm-pdThumb" type="button" data-bs-target="#jmPdCarousel" data-bs-slide-to="3" aria-label="Thumbnail 4">
                   <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=360&q=80" alt="">
@@ -286,59 +299,7 @@
             </div>
           </div>
 
-          <!-- Detail strip -->
-          <div class="jm-pdCard">
-            <div class="p-3 p-lg-4">
-              <h3 class="jm-pdSectionTitle mb-3">Detail Produk</h3>
-
-              <div class="jm-pdFacts">
-                <div class="jm-pdFact">
-                  <div class="jm-pdFact__icon">🪵</div>
-                  <div class="jm-pdFact__txt">
-                    <div class="jm-pdFact__k">Rangka</div>
-                    <div class="jm-pdFact__v">Kayu pilihan</div>
-                  </div>
-                </div>
-
-                <div class="jm-pdFact">
-                  <div class="jm-pdFact__icon">🧵</div>
-                  <div class="jm-pdFact__txt">
-                    <div class="jm-pdFact__k">Dudukan</div>
-                    <div class="jm-pdFact__v">Busa/Anyaman</div>
-                  </div>
-                </div>
-
-                <div class="jm-pdFact">
-                  <div class="jm-pdFact__icon">🎨</div>
-                  <div class="jm-pdFact__txt">
-                    <div class="jm-pdFact__k">Finishing</div>
-                    <div class="jm-pdFact__v">Natural/Duco</div>
-                  </div>
-                </div>
-
-                <div class="jm-pdFact">
-                  <div class="jm-pdFact__icon">📐</div>
-                  <div class="jm-pdFact__txt">
-                    <div class="jm-pdFact__k">Ukuran</div>
-                    <div class="jm-pdFact__v">Custom</div>
-                  </div>
-                </div>
-
-                <div class="jm-pdFact">
-                  <div class="jm-pdFact__icon">🚚</div>
-                  <div class="jm-pdFact__txt">
-                    <div class="jm-pdFact__k">Kirim</div>
-                    <div class="jm-pdFact__v">Packing aman</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="d-flex flex-wrap gap-2 mt-3">
-                <a class="btn jm-btn jm-btn--outline rounded-pill px-4 py-2" href="index.html#cara-pesan">Lihat Cara Pesan</a>
-                <a class="btn jm-btn jm-btn--soft rounded-pill px-4 py-2" href="index.html#galeri">Lihat Galeri</a>
-              </div>
-            </div>
-          </div>
+          <!-- ✅ DETAIL STRIP "Detail Produk" (DIHAPUS sesuai perintah) -->
 
         </div>
 
@@ -346,23 +307,7 @@
         <div class="col-12 col-lg-4">
           <div class="jm-pdSide sticky-top jm-pdSideSticky">
 
-            <div class="jm-sideCard mb-3">
-              <div class="jm-sideTitle">Jadwal Konsultasi</div>
-
-              <div class="row g-2 mt-1">
-                <div class="col-6">
-                  <input type="date" class="form-control jm-input" id="jmSchedDate">
-                </div>
-                <div class="col-6">
-                  <input type="time" class="form-control jm-input" id="jmSchedTime">
-                </div>
-              </div>
-
-              <button class="btn jm-btn jm-btn--brand w-100 rounded-pill py-2 mt-3" id="jmBookBtn" type="button">
-                Book Konsultasi
-              </button>
-            </div>
-
+            <!-- Save / Share -->
             <div class="jm-sideCard mb-3">
               <div class="d-flex gap-2">
                 <button class="btn jm-btn jm-btn--soft rounded-pill flex-fill py-2" id="jmSaveBtn" type="button">☆ Save</button>
@@ -370,6 +315,7 @@
               </div>
             </div>
 
+            <!-- Agent -->
             <div class="jm-sideCard mb-3">
               <div class="jm-agent">
                 <img class="jm-agent__img" src="https://i.pravatar.cc/96?img=32" alt="Admin Jembermeubel">
@@ -382,38 +328,70 @@
               <div class="d-grid gap-2 mt-3">
                 <a class="btn jm-btn jm-btn--brand rounded-pill py-2" href="tel:+62XXXXXXXXXXX">📞 Call Now</a>
                 <a class="btn jm-btn jm-btn--outline rounded-pill py-2"
-                   href="https://wa.me/62XXXXXXXXXXX?text=Halo%20Jembermeubel,%20saya%20mau%20tanya%20Kursi%20Tamu%20Minimalis."
-                   target="_blank" rel="noopener">💬 Message</a>
+                   href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20order%20Kursi%20Tamu%20Minimalis."
+                   target="_blank" rel="noopener">💬 WhatsApp</a>
               </div>
             </div>
 
+            <!-- ✅ FORM BELI (TO THE POINT, mengganti form lama + tanpa jadwal konsultasi + tanpa estimasi biaya) -->
             <div class="jm-sideCard mb-3">
-              <div class="jm-sideTitle">Tanya / Order Cepat</div>
+              <div class="jm-sideTitle">Beli Sekarang</div>
 
-              <form id="jmPdContactForm" class="mt-2" novalidate>
-                <input type="hidden" id="jmProductName" value="Kursi Tamu Minimalis (Set)">
+              <div class="mt-2" style="color: rgba(15,31,31,.72); font-weight:800; font-size: 13px; line-height:1.6;">
+                <div><b>Mulai Rp 2.500.000</b> • Bisa custom ukuran/finishing</div>
+                <div>✅ Packing aman • ✅ Kirim seluruh Indonesia</div>
+              </div>
+
+              <form id="jmPdBuyForm" class="mt-3" novalidate>
+                <input type="hidden" id="jmProductName" value="Kursi Tamu Minimalis — #JM-KTM-002">
 
                 <div class="mb-2">
                   <input class="form-control jm-input" id="jmNama" placeholder="Nama kamu" required>
                 </div>
                 <div class="mb-2">
-                  <input class="form-control jm-input" id="jmKota" placeholder="Kota tujuan" required>
+                  <input class="form-control jm-input" id="jmKota" placeholder="Kota tujuan (untuk cek ongkir)" required>
                 </div>
+
                 <div class="mb-2">
                   <select class="form-select jm-input" id="jmVarian" required>
-                    <option value="Set 1–1–1">Set 1–1–1</option>
-                    <option value="Set 3–1–1" selected>Set 3–1–1</option>
-                    <option value="2 Seater + 1">2 Seater + 1</option>
-                    <option value="Custom (sebutkan di pesan)">Custom (sebutkan di pesan)</option>
+                    <option value="Set 1–1–1">Konfigurasi: Set 1–1–1</option>
+                    <option value="Set 3–1–1" selected>Konfigurasi: Set 3–1–1</option>
+                    <option value="2 Seater + 1">Konfigurasi: 2 Seater + 1</option>
+                    <option value="Custom (sebutkan ukuran)">Konfigurasi: Custom (sebutkan ukuran)</option>
                   </select>
                 </div>
+
                 <div class="mb-2">
-                  <textarea class="form-control jm-input" id="jmMsg" rows="4" placeholder="Pesan (opsional): ukuran, bahan, finishing, kain, dll"></textarea>
+                  <select class="form-select jm-input" id="jmFinishing" required>
+                    <option value="Natural" selected>Finishing: Natural</option>
+                    <option value="Walnut">Finishing: Walnut</option>
+                    <option value="Duco">Finishing: Duco</option>
+                  </select>
+                </div>
+
+                <div class="mb-2">
+                  <select class="form-select jm-input" id="jmDudukan" required>
+                    <option value="Busa" selected>Dudukan: Busa</option>
+                    <option value="Anyaman">Dudukan: Anyaman</option>
+                    <option value="Custom">Dudukan: Custom</option>
+                  </select>
+                </div>
+
+                <div class="mb-2">
+                  <input class="form-control jm-input" id="jmUkuran" placeholder="Ukuran (opsional) contoh: 3 seater 180cm">
+                </div>
+
+                <div class="mb-2">
+                  <textarea class="form-control jm-input" id="jmCatatan" rows="3" placeholder="Catatan (opsional): kain, warna, model tangan, dll"></textarea>
                 </div>
 
                 <button class="btn jm-btn jm-btn--brand w-100 rounded-pill py-2" type="submit">
-                  Send Request
+                  ✅ Beli via WhatsApp
                 </button>
+
+                <div class="mt-2" style="color: rgba(15,31,31,.62); font-weight:800; font-size: 12.5px;">
+                  Klik tombol di atas untuk konfirmasi total harga + ongkir + estimasi produksi.
+                </div>
 
                 <div class="jm-miniToast" id="jmPdToast" aria-live="polite" aria-atomic="true">
                   Mohon isi Nama & Kota dulu ya 🙂
@@ -421,32 +399,7 @@
               </form>
             </div>
 
-            <div class="jm-sideCard mb-3">
-              <div class="jm-sideTitle">Estimasi Biaya</div>
-
-              <div class="jm-costRow mt-2">
-                <span>Harga produk</span>
-                <input type="number" class="form-control jm-input jm-costInput" id="jmCostBase" value="2500000" min="0">
-              </div>
-              <div class="jm-costRow">
-                <span>Upgrade dudukan</span>
-                <input type="number" class="form-control jm-input jm-costInput" id="jmCostFinish" value="0" min="0">
-              </div>
-              <div class="jm-costRow">
-                <span>Ongkir estimasi</span>
-                <input type="number" class="form-control jm-input jm-costInput" id="jmCostShip" value="0" min="0">
-              </div>
-
-              <div class="jm-costTotal mt-2">
-                <span>Total</span>
-                <span id="jmCostTotal">Rp 2.500.000</span>
-              </div>
-
-              <div class="jm-costHint mt-2">
-                Estimasi saja. Total final mengikuti konfigurasi set, bahan, finishing & tujuan kirim.
-              </div>
-            </div>
-
+            <!-- Produk Serupa (tetap) -->
             <div class="jm-sideCard">
               <div class="jm-sideTitle">Produk Serupa</div>
 
@@ -485,13 +438,13 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- JS: thumbs active + WA + cost calc + save/share + booking -->
+  <!-- JS: thumbs active + WA + save/share -->
   <script>
     (function(){
-      const WA_NUMBER = "62895369969300"; // ganti nomor WA kamu (tanpa +)
+      const WA_NUMBER = "62895369969300";
       const toast = document.getElementById("jmPdToast");
 
-      // ===== thumbs active sync =====
+      // thumbs sync
       const thumbs = Array.from(document.querySelectorAll(".jm-pdThumb"));
       const carouselEl = document.getElementById("jmPdCarousel");
       bootstrap.Carousel.getOrCreateInstance(carouselEl, { interval: false, ride: false });
@@ -502,7 +455,6 @@
       carouselEl.addEventListener("slid.bs.carousel", (e) => setThumbActive(e.to));
       thumbs.forEach((btn, idx) => btn.addEventListener("click", () => setThumbActive(idx)));
 
-      // ===== toast helper =====
       function showToast(msg){
         toast.textContent = msg;
         toast.classList.add("is-show");
@@ -510,16 +462,19 @@
         showToast._t = setTimeout(() => toast.classList.remove("is-show"), 2400);
       }
 
-      // ===== contact form => WhatsApp =====
-      const form = document.getElementById("jmPdContactForm");
+      // BUY form => WhatsApp
+      const form = document.getElementById("jmPdBuyForm");
       form.addEventListener("submit", function(e){
         e.preventDefault();
 
-        const product = document.getElementById("jmProductName").value.trim();
-        const nama = document.getElementById("jmNama").value.trim();
-        const kota = document.getElementById("jmKota").value.trim();
-        const varian = document.getElementById("jmVarian").value.trim();
-        const msg = document.getElementById("jmMsg").value.trim();
+        const product  = document.getElementById("jmProductName").value.trim();
+        const nama     = document.getElementById("jmNama").value.trim();
+        const kota     = document.getElementById("jmKota").value.trim();
+        const varian   = document.getElementById("jmVarian").value.trim();
+        const finish   = document.getElementById("jmFinishing").value.trim();
+        const dudukan  = document.getElementById("jmDudukan").value.trim();
+        const ukuran   = document.getElementById("jmUkuran").value.trim();
+        const catatan  = document.getElementById("jmCatatan").value.trim();
 
         if(!nama || !kota){
           showToast("Mohon isi Nama & Kota dulu ya 🙂");
@@ -527,55 +482,25 @@
         }
 
         const lines = [
-          "Halo Jembermeubel, saya mau tanya / order:",
+          "Halo Jembermeubel, saya MAU BELI produk berikut:",
           "",
           "Produk: " + product,
           "Nama: " + nama,
-          "Kota: " + kota,
+          "Kota Tujuan: " + kota,
           "Konfigurasi: " + varian,
+          "Finishing: " + finish,
+          "Dudukan: " + dudukan
         ];
-        if(msg) lines.push("Pesan: " + msg);
-        lines.push("", "Terima kasih 🙏");
+        if(ukuran) lines.push("Ukuran: " + ukuran);
+        if(catatan) lines.push("Catatan: " + catatan);
+
+        lines.push("", "Mohon info total harga + ongkir + estimasi produksi ya. Terima kasih 🙏");
 
         const url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
         window.open(url, "_blank", "noopener");
       });
 
-      // ===== booking =====
-      const bookBtn = document.getElementById("jmBookBtn");
-      bookBtn.addEventListener("click", function(){
-        const d = document.getElementById("jmSchedDate").value;
-        const t = document.getElementById("jmSchedTime").value;
-
-        const when = (d || t) ? ("Jadwal: " + (d || "—") + " " + (t || "")) : "Jadwal: (belum ditentukan)";
-        const lines = [
-          "Halo Jembermeubel, saya mau booking konsultasi untuk Kursi Tamu Minimalis.",
-          when,
-          "",
-          "Mohon info opsi set & estimasi harga ya. Terima kasih 🙏"
-        ];
-        const url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
-        window.open(url, "_blank", "noopener");
-      });
-
-      // ===== cost calculator =====
-      function formatRupiah(n){
-        n = Number(n || 0);
-        return "Rp " + n.toLocaleString("id-ID");
-      }
-      const base = document.getElementById("jmCostBase");
-      const fin  = document.getElementById("jmCostFinish");
-      const ship = document.getElementById("jmCostShip");
-      const totalEl = document.getElementById("jmCostTotal");
-
-      function calc(){
-        const total = (Number(base.value||0) + Number(fin.value||0) + Number(ship.value||0));
-        totalEl.textContent = formatRupiah(total);
-      }
-      [base, fin, ship].forEach(el => el.addEventListener("input", calc));
-      calc();
-
-      // ===== save/share =====
+      // save/share
       const saveBtn = document.getElementById("jmSaveBtn");
       saveBtn.addEventListener("click", function(){
         const saved = saveBtn.classList.toggle("is-saved");
@@ -622,9 +547,6 @@
                target="_blank" rel="noopener">
               Konsultasi WhatsApp
             </a>
-            <a class="btn jm-btn jm-btn--soft rounded-pill px-4 py-2" href="index.html#galeri">
-              Lihat Galeri
-            </a>
           </div>
         </div>
 
@@ -638,7 +560,7 @@
               <ul class="jm-footerList">
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="about.html">Tentang</a></li>
-                <li><a href="index.html#faq">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
               </ul>
             </div>
 
@@ -665,13 +587,6 @@
                 <div class="jm-footerContact__item">
                   <span class="jm-footerContact__dot" aria-hidden="true"></span>
                   <span>Pengiriman: <b>Seluruh Indonesia</b></span>
-                </div>
-                <div class="jm-footerContact__item">
-                  <span class="jm-footerContact__dot" aria-hidden="true"></span>
-                  <a href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
-                     target="_blank" rel="noopener">
-                    WhatsApp: <b>+62 895-3696-9300</b>
-                  </a>
                 </div>
               </div>
 
@@ -704,7 +619,6 @@
 </footer>
 
 <script>
-  // Tahun otomatis
   document.getElementById("jmYear").textContent = new Date().getFullYear();
 </script>
 
