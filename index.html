@@ -22,13 +22,24 @@
   <main class="container jm-wrap py-4">
 
 <!-- NAVBAR (sticky + dropdown produk) -->
-<!-- NAVBAR (sticky + dropdown produk) -->
 <nav class="navbar navbar-expand-lg jm-navbar jm-navbarSticky sticky-top rounded-4 px-3 px-lg-4 py-3">
   <div class="container-fluid px-0">
 
-    <a class="navbar-brand jm-brand d-flex align-items-center gap-2" href="index.html">
-      <span class="jm-brand__dot"></span>
-      <span>Jembermeubel</span>
+    <a class="navbar-brand jm-brand d-flex align-items-center gap-2" href="index.html" aria-label="Jembermeubel">
+      <!-- LOGO ONLY (SVG inline) -->
+      <svg width="40" height="40" viewBox="0 0 64 64" role="img" aria-hidden="true" style="display:block">
+        <!-- circle -->
+        <circle cx="32" cy="32" r="30" fill="currentColor" opacity="0.95"></circle>
+        <!-- inner dot accent -->
+        <circle cx="48" cy="18" r="5" fill="#ffffff" opacity="0.9"></circle>
+
+        <!-- JM letters -->
+        <path d="M18 44V20h6v24c0 2-1 3-3 3s-3-1-3-3z" fill="#ffffff"></path>
+        <path d="M28 44V20h6l6 12 6-12h6v24h-6V31l-6 12-6-12v13h-6z" fill="#ffffff"></path>
+      </svg>
+
+      <!-- hidden text (biar SEO/aksesibilitas aman, tapi tidak tampil) -->
+      <span class="visually-hidden">Jembermeubel</span>
     </a>
 
     <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jmNav"
@@ -61,6 +72,7 @@
         </li>
 
         <li class="nav-item"><a class="nav-link jm-navlink" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link jm-navlink" href="properti.html">Properti</a></li>
       </ul>
 
       <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-3">
@@ -74,6 +86,7 @@
 
   </div>
 </nav>
+
 
     <!-- HERO (dikasih jarak dari navbar) -->
     <section id="hero" class="jm-hero mt-4 mt-lg-5">
@@ -132,7 +145,7 @@
 
               <img
                 class="jm-img jm-img--contain"
-                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=80"
+                src="assets/img/lemarihias.jpeg"
                 alt="Blue chair"
               />
             </article>
@@ -220,7 +233,7 @@
       </div>
       <img
         class="jm-catCard__img jm-catCard__img--center"
-        src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80"
+        src="assets/img/kursi22.jpeg"
         alt="Kursi tamu"
         loading="lazy"
       />
@@ -229,11 +242,11 @@
     <!-- WIDE (kanan atas) -->
     <a class="jm-catCard jm-catCard--wide" href="#produk">
       <div class="jm-catCard__meta">
-        <div class="jm-catCard__title">Meja Makan</div>
+        <div class="jm-catCard__title">Lemari</div>
       </div>
       <img
         class="jm-catCard__img jm-catCard__img--right"
-        src="https://images.unsplash.com/photo-1549497538-303791108f95?auto=format&fit=crop&w=1400&q=80"
+        src="assets/img/lemari1.jpeg"
         alt="Meja makan"
         loading="lazy"
       />
@@ -242,11 +255,11 @@
     <!-- SMALL 1 (kanan bawah kiri) -->
     <a class="jm-catCard jm-catCard--small" href="#produk">
       <div class="jm-catCard__meta">
-        <div class="jm-catCard__title">Lemari</div>
+        <div class="jm-catCard__title">Meja Makan</div>
       </div>
       <img
         class="jm-catCard__img jm-catCard__img--bottom"
-        src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1200&q=80"
+        src="assets/img/mejamakan.jpeg"
         alt="Lemari"
         loading="lazy"
       />
@@ -259,7 +272,7 @@
       </div>
       <img
         class="jm-catCard__img jm-catCard__img--right"
-        src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=80"
+        src="assets/img/raksepatu.jpeg"
         alt="Kitchen set"
         loading="lazy"
       />
@@ -276,7 +289,7 @@
         </div>
         <img
           class="jm-catCard__img jm-catCard__img--right"
-          src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
+          src="assets/img/kasur.jpeg"
           alt="Tempat tidur"
           loading="lazy"
         />
@@ -290,7 +303,7 @@
         </div>
         <img
           class="jm-catCard__img jm-catCard__img--right"
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80"
+          src="assets/img/buffet.jpeg"
           alt="Buffet TV"
           loading="lazy"
         />
@@ -315,7 +328,7 @@
     <div class="col-12 col-sm-6 col-lg-3">
       <a class="jm-pCard h-100" href="mejamakan.html">
         <div class="jm-pCard__media"
-          style="background-image:url('https://images.unsplash.com/photo-1549497538-303791108f95?auto=format&fit=crop&w=1200&q=80');">
+          style="background-image:url('assets/img/kursi22.jpeg');">
           <span class="jm-pCard__badge">Best Seller</span>
         </div>
 
@@ -335,7 +348,7 @@
     <div class="col-12 col-sm-6 col-lg-3">
       <a class="jm-pCard h-100" href="kursitamu.html">
         <div class="jm-pCard__media"
-          style="background-image:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80');">
+          style="background-image:url('assets/img/mejamakan.jpeg');">
           <span class="jm-pCard__badge jm-pCard__badge--soft">New</span>
         </div>
 
@@ -355,7 +368,7 @@
     <div class="col-12 col-sm-6 col-lg-3">
       <a class="jm-pCard h-100" href="lemaripakaian.html">
         <div class="jm-pCard__media"
-          style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80');">
+          style="background-image:url('assets/img/lemarihias.jpeg');">
           <span class="jm-pCard__badge">Best Seller</span>
         </div>
 
@@ -375,7 +388,7 @@
     <div class="col-12 col-sm-6 col-lg-3">
       <a class="jm-pCard h-100" href="buffettv.html">
         <div class="jm-pCard__media"
-          style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80');">
+          style="background-image:url('assets/img/buffet.jpeg');">
           <span class="jm-pCard__badge jm-pCard__badge--soft">Custom</span>
         </div>
 
@@ -448,79 +461,6 @@
     </div>
   </div>
 </section>
-
-
-<!-- GALERI / PROJECT -->
-<section id="galeri" class="jm-section mt-4 mt-lg-5">
-  <div class="jm-sectionHead jm-sectionHead--center mb-3 mb-lg-4">
-    <h2 class="jm-sectionTitle">Galeri</h2>
-    <p class="jm-sectionDesc">
-      Inspirasi hasil produksi dan detail finishing. Gunakan filter untuk lihat kategori.
-    </p>
-  </div>
-
-  <!-- Filter Tabs -->
-  <div class="jm-galleryTabs mb-3 mb-lg-4" role="tablist" aria-label="Filter galeri">
-    <button class="jm-tab is-active" type="button" data-filter="all">Semua</button>
-    <button class="jm-tab" type="button" data-filter="kursi">Kursi</button>
-    <button class="jm-tab" type="button" data-filter="meja">Meja</button>
-    <button class="jm-tab" type="button" data-filter="lemari">Lemari</button>
-    <button class="jm-tab" type="button" data-filter="ruang">Ruang Tamu</button>
-    <button class="jm-tab" type="button" data-filter="finishing">Finishing</button>
-  </div>
-
-  <!-- Grid -->
-  <div class="row g-3 jm-galleryGrid" id="jmGalleryGrid">
-    <!-- item: kursi -->
-    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="kursi ruang">
-      <a class="jm-gallery" href="#" aria-label="Detail project kursi">
-        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80" alt="Project Kursi Tamu" loading="lazy">
-        <span class="jm-galleryTag">Kursi</span>
-      </a>
-    </div>
-
-    <!-- item: meja -->
-    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="meja finishing">
-      <a class="jm-gallery" href="#" aria-label="Detail project meja">
-        <img src="https://images.unsplash.com/photo-1549497538-303791108f95?auto=format&fit=crop&w=1200&q=80" alt="Project Meja Makan" loading="lazy">
-        <span class="jm-galleryTag">Meja</span>
-      </a>
-    </div>
-
-    <!-- item: lemari -->
-    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="lemari finishing">
-      <a class="jm-gallery" href="#" aria-label="Detail project lemari">
-        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Project Lemari" loading="lazy">
-        <span class="jm-galleryTag">Lemari</span>
-      </a>
-    </div>
-
-    <!-- item: ruang tamu -->
-    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="ruang kursi">
-      <a class="jm-gallery" href="#" aria-label="Detail project ruang tamu">
-        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80" alt="Project Ruang Tamu" loading="lazy">
-        <span class="jm-galleryTag">Ruang Tamu</span>
-      </a>
-    </div>
-
-    <!-- item: finishing -->
-    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="finishing">
-      <a class="jm-gallery" href="#" aria-label="Detail project finishing">
-        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80" alt="Detail Finishing" loading="lazy">
-        <span class="jm-galleryTag">Finishing</span>
-      </a>
-    </div>
-
-    <!-- item: kursi / finishing -->
-    <div class="col-6 col-lg-4 jm-galleryItem" data-filter="kursi finishing">
-      <a class="jm-gallery" href="#" aria-label="Detail project kursi finishing">
-        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80" alt="Project Kursi & Finishing" loading="lazy">
-        <span class="jm-galleryTag">Kursi</span>
-      </a>
-    </div>
-  </div>
-</section>
-
 
 
 <!-- TESTIMONI -->
@@ -731,97 +671,6 @@
 </section>
 
 
-<!-- CTA KONTAK (CLOSING) -->
-<section id="cta" class="jm-section mt-4 mt-lg-5 mb-4">
-  <div class="jm-cta card overflow-hidden">
-    <div class="card-body jm-cta__body">
-      <div class="row align-items-center g-3 g-lg-4">
-
-        <div class="col-12 col-lg-7">
-          <h2 class="jm-cta__title mb-2">Siap konsultasi furniture untuk rumahmu?</h2>
-          <p class="jm-cta__desc mb-3">
-            Isi format singkat, lalu klik WhatsApp — pesan otomatis terisi.
-          </p>
-
-          <div class="d-flex flex-wrap gap-2">
-            <!-- Tombol WA (akan diproses JS) -->
-            <a class="btn jm-btn jm-btn--brand rounded-pill px-4 py-2 jm-cta__wa"
-               id="jmCtaWa"
-               href="https://wa.me/62895369969300"
-               target="_blank" rel="noopener">
-              WhatsApp Sekarang
-            </a>
-
-            <a class="btn jm-btn jm-btn--outline rounded-pill px-4 py-2" href="#produk">
-              Lihat Produk
-            </a>
-
-            <!-- tombol copy (copy format dari isian) -->
-            <button class="btn jm-btn jm-btn--soft rounded-pill px-4 py-2" type="button" id="jmCopyFormat">
-              Copy Format
-            </button>
-          </div>
-
-          <div class="jm-cta__note mt-3">
-            <span class="jm-cta__dot" aria-hidden="true"></span>
-            <span>Jam respons: <b>09.00–21.00 WIB</b> (bisa kamu sesuaikan)</span>
-          </div>
-
-          <!-- toast kecil -->
-          <div class="jm-ctaToast" id="jmCtaToast" aria-live="polite" aria-atomic="true">
-            Pesan siap ✅ Membuka WhatsApp…
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-5">
-          <form class="jm-cta__mini" id="jmCtaForm" autocomplete="on">
-            <div class="jm-cta__miniTop">
-              <div class="jm-cta__miniTitle">Format pesan cepat</div>
-              <span class="jm-cta__miniBadge">Biar cepat diproses</span>
-            </div>
-
-            <div class="jm-ctaForm">
-              <label class="jm-ctaLabel">
-                Nama
-                <input class="jm-ctaInput" type="text" name="nama" placeholder="Contoh: Budi" />
-              </label>
-
-              <label class="jm-ctaLabel">
-                Kota
-                <input class="jm-ctaInput" type="text" name="kota" placeholder="Contoh: Jember" />
-              </label>
-
-              <label class="jm-ctaLabel">
-                Produk
-                <input class="jm-ctaInput" type="text" name="produk" placeholder="Contoh: Meja makan 6 kursi" />
-              </label>
-
-              <label class="jm-ctaLabel">
-                Ukuran / Warna
-                <input class="jm-ctaInput" type="text" name="ukuran" placeholder="Contoh: 160x80, natural" />
-              </label>
-
-              <label class="jm-ctaLabel">
-                Catatan
-                <textarea class="jm-ctaTextarea" name="catatan" rows="3" placeholder="Contoh: minta kaki meja model A"></textarea>
-              </label>
-            </div>
-
-            <div class="jm-cta__miniHint">
-              Tip: kirim juga foto ruangan / referensi model (kalau ada).
-            </div>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
   </main>
 
 
@@ -929,39 +778,6 @@
 </script>
 
 
-  <script>
-(function(){
-  const tabs = document.querySelectorAll('#galeri .jm-tab');
-  const items = document.querySelectorAll('#galeri .jm-galleryItem');
-
-  if(!tabs.length || !items.length) return;
-
-  function setActive(tab){
-    tabs.forEach(t => t.classList.remove('is-active'));
-    tab.classList.add('is-active');
-  }
-
-  function applyFilter(filter){
-    items.forEach(item => {
-      const tags = (item.getAttribute('data-filter') || '').toLowerCase();
-      const match = filter === 'all' || tags.includes(filter);
-      item.classList.toggle('is-hidden', !match);
-    });
-  }
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const filter = (tab.getAttribute('data-filter') || 'all').toLowerCase();
-      setActive(tab);
-      applyFilter(filter);
-    });
-  });
-
-  // default
-  applyFilter('all');
-})();
-</script>
-
 <!-- FOOTER -->
 <footer class="jm-footer mt-4 mt-lg-5">
   <div class="container jm-wrap">
@@ -985,9 +801,6 @@
                href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
                target="_blank" rel="noopener">
               Konsultasi WhatsApp
-            </a>
-            <a class="btn jm-btn jm-btn--soft rounded-pill px-4 py-2" href="index.html#galeri">
-              Lihat Galeri
             </a>
           </div>
         </div>
@@ -1029,13 +842,6 @@
                 <div class="jm-footerContact__item">
                   <span class="jm-footerContact__dot" aria-hidden="true"></span>
                   <span>Pengiriman: <b>Seluruh Indonesia</b></span>
-                </div>
-                <div class="jm-footerContact__item">
-                  <span class="jm-footerContact__dot" aria-hidden="true"></span>
-                  <a href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
-                     target="_blank" rel="noopener">
-                    WhatsApp: <b>+62 895-3696-9300</b>
-                  </a>
                 </div>
               </div>
 
