@@ -21,64 +21,71 @@
 
   <main class="container jm-wrap py-4">
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg jm-navbar jm-navbarSticky sticky-top rounded-4 px-3 px-lg-4 py-3">
-      <div class="container-fluid px-0">
+<!-- NAVBAR (sticky + dropdown produk) -->
+<nav class="navbar navbar-expand-lg jm-navbar jm-navbarSticky sticky-top rounded-4 px-3 px-lg-4 py-3">
+  <div class="container-fluid px-0">
 
-        <!-- Logo only -->
-        <a class="navbar-brand jm-brand d-flex align-items-center gap-2" href="index.html" aria-label="Jembermeubel">
-          <svg class="jm-props2-logo" width="40" height="40" viewBox="0 0 64 64" role="img" aria-hidden="true">
-            <circle cx="32" cy="32" r="30" fill="currentColor" opacity="0.95"></circle>
-            <circle cx="48" cy="18" r="5" fill="#ffffff" opacity="0.9"></circle>
-            <path d="M18 44V20h6v24c0 2-1 3-3 3s-3-1-3-3z" fill="#ffffff"></path>
-            <path d="M28 44V20h6l6 12 6-12h6v24h-6V31l-6 12-6-12v13h-6z" fill="#ffffff"></path>
-          </svg>
-          <span class="visually-hidden">Jembermeubel</span>
-        </a>
+    <a class="navbar-brand jm-brand d-flex align-items-center gap-2" href="index.html" aria-label="Jembermeubel">
+      <!-- LOGO ONLY (SVG inline) -->
+      <svg width="40" height="40" viewBox="0 0 64 64" role="img" aria-hidden="true" style="display:block">
+        <!-- circle -->
+        <circle cx="32" cy="32" r="30" fill="currentColor" opacity="0.95"></circle>
+        <!-- inner dot accent -->
+        <circle cx="48" cy="18" r="5" fill="#ffffff" opacity="0.9"></circle>
 
-        <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jmNav"
-          aria-controls="jmNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- JM letters -->
+        <path d="M18 44V20h6v24c0 2-1 3-3 3s-3-1-3-3z" fill="#ffffff"></path>
+        <path d="M28 44V20h6l6 12 6-12h6v24h-6V31l-6 12-6-12v13h-6z" fill="#ffffff"></path>
+      </svg>
 
-        <div class="collapse navbar-collapse" id="jmNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-            <li class="nav-item"><a class="nav-link jm-navlink" href="index.html">Beranda</a></li>
-            <li class="nav-item"><a class="nav-link jm-navlink" href="about.html">Tentang</a></li>
+      <!-- hidden text (biar SEO/aksesibilitas aman, tapi tidak tampil) -->
+      <span class="visually-hidden">Jembermeubel</span>
+    </a>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle jm-navlink"
-                 href="#"
-                 id="jmDropdownProduk"
-                 role="button"
-                 data-bs-toggle="dropdown"
-                 aria-expanded="false">
-                Produk
-              </a>
+    <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#jmNav"
+      aria-controls="jmNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-              <ul class="dropdown-menu jm-dropdown" aria-labelledby="jmDropdownProduk">
-                <li><a class="dropdown-item jm-ddItem" href="mejamakan.html">Meja Makan Jati</a></li>
-                <li><a class="dropdown-item jm-ddItem" href="kursitamu.html">Kursi Tamu</a></li>
-                <li><a class="dropdown-item jm-ddItem" href="lemaripakaian.html">Lemari Pakaian</a></li>
-                <li><a class="dropdown-item jm-ddItem" href="buffettv.html">Buffet TV</a></li>
-              </ul>
-            </li>
+    <div class="collapse navbar-collapse" id="jmNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link jm-navlink" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link jm-navlink" href="about.html">Tentang</a></li>
 
-            <li class="nav-item"><a class="nav-link jm-navlink" href="blog.html">Blog</a></li>
-            <li class="nav-item"><a class="nav-link jm-navlink" href="properti.html">Properti</a></li>
+        <!-- DROPDOWN PRODUK -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle jm-navlink"
+             href=""
+             id="jmDropdownProduk"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Produk
+          </a>
+
+          <ul class="dropdown-menu jm-dropdown" aria-labelledby="jmDropdownProduk">
+            <li><a class="dropdown-item jm-ddItem" href="properti.html">Semua</a></li>
+            <li><a class="dropdown-item jm-ddItem" href="mejamakan.html">Meja Makan Jati</a></li>
+            <li><a class="dropdown-item jm-ddItem" href="kursitamu.html">Kursi Tamu</a></li>
+            <li><a class="dropdown-item jm-ddItem" href="lemaripakaian.html">Lemari Pakaian</a></li>
+            <li><a class="dropdown-item jm-ddItem" href="buffettv.html">Buffet TV</a></li>
           </ul>
+        </li>
 
-          <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-3">
-            <a class="btn jm-navbtn jm-navbtn--brand rounded-pill px-3"
-               href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
-               target="_blank" rel="noopener">
-              WhatsApp
-            </a>
-          </div>
-        </div>
+        <li class="nav-item"><a class="nav-link jm-navlink" href="blog.html">Blog</a></li>
+      </ul>
 
+      <div class="d-flex gap-2 mt-3 mt-lg-0 ms-lg-3">
+        <a class="btn jm-navbtn jm-navbtn--brand rounded-pill px-3"
+           href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi."
+           target="_blank" rel="noopener">
+          WhatsApp
+        </a>
       </div>
-    </nav>
+    </div>
+
+  </div>
+</nav>
 
     <!-- PAGE HEAD -->
     <section class="jm-props2-head mt-4">
@@ -325,14 +332,6 @@
               © <span id="jmYear"></span> Jembermeubel. All rights reserved.
             </div>
 
-            <div class="jm-footerBottomLinks">
-              <a href="about.html">Tentang</a>
-              <span class="jm-footerSep">•</span>
-              <a href="index.html#cara-pesan">Cara Pesan</a>
-              <span class="jm-footerSep">•</span>
-              <a href="index.html#cta">Kontak</a>
-            </div>
-          </div>
 
         </div>
       </div>
