@@ -3,18 +3,185 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jembermeubel</title>
+
+  <title>Jembermeubel | Furniture Kayu Jati & Custom Interior Jember</title>
+
+  <!-- SEO Core -->
+  <meta name="description" content="Jembermeubel melayani furniture kayu (jati/mahoni/mindi) & custom desain: meja makan, kursi tamu, lemari, buffet TV, kitchen set. Pengiriman seluruh Indonesia. Konsultasi via WhatsApp." />
+  <meta name="keywords" content="jember meubel, jembermeubel, meubel jember, furniture jember, mebel jember, furniture kayu jati, meja makan jati, kursi tamu minimalis, lemari pakaian, buffet tv minimalis, kitchen set, custom furniture, custom interior, mebel custom jember" />
+  <meta name="author" content="Haidar" />
+  <meta name="publisher" content="Jembermeubel" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://jembermeubel.vercel.app/" />
+
+  <!-- Performance Hints -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="dns-prefetch" href="//images.unsplash.com">
+  <link rel="preconnect" href="https://i.pravatar.cc" crossorigin>
+  <link rel="dns-prefetch" href="//i.pravatar.cc">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jembermeubel" />
+  <meta property="og:title" content="Jembermeubel | Furniture Kayu Jati & Custom Interior Jember" />
+  <meta property="og:description" content="Furniture kayu rapi & kokoh. Ready stock dan custom ukuran/desain untuk rumah, kantor, atau usaha. Konsultasi via WhatsApp." />
+  <meta property="og:url" content="https://jembermeubel.vercel.app/" />
+  <meta property="og:image" content="https://jembermeubel.vercel.app/assets/img/lemarihias.jpeg" />
+  <meta property="og:image:alt" content="Jembermeubel - Furniture kayu & custom" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jembermeubel | Furniture Kayu Jati & Custom Interior Jember" />
+  <meta name="twitter:description" content="Meja makan, kursi tamu, lemari, buffet TV, kitchen set. Bisa custom ukuran & finishing. Konsultasi via WhatsApp." />
+  <meta name="twitter:image" content="https://jembermeubel.vercel.app/assets/img/lemarihias.jpeg" />
+
+  <!-- Favicon (maksimalkan) -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0b1320" />
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- Floating Buttons CSS (ringan, tidak ganggu struktur) -->
+  <style>
+    .jm-float {
+      position: fixed;
+      right: 16px;
+      z-index: 9999;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(0,0,0,.18);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .jm-float svg { width: 24px; height: 24px; display:block; }
+    .jm-float--wa {
+      bottom: 16px;
+      background: #22c55e;
+      color: #fff;
+    }
+    .jm-float--up {
+      bottom: 78px;
+      background: rgba(255,255,255,.92);
+      color: #111827;
+      border: 1px solid rgba(17,24,39,.12);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(6px);
+      transition: opacity .18s ease, transform .18s ease;
+      backdrop-filter: blur(10px);
+    }
+    .jm-float--up.is-show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    @media (max-width: 575.98px){
+      .jm-float { right: 14px; }
+    }
+  </style>
+
+  <!-- Schema.org (AI Overview friendly): Organization + LocalBusiness + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://jembermeubel.vercel.app/#org",
+        "name": "Jembermeubel",
+        "url": "https://jembermeubel.vercel.app/",
+        "logo": "https://jembermeubel.vercel.app/favicon-512x512.png",
+        "sameAs": [],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+62-895-3699-69300",
+          "contactType": "customer service",
+          "areaServed": "ID",
+          "availableLanguage": ["id"]
+        }]
+      },
+      {
+        "@type": "FurnitureStore",
+        "@id": "https://jembermeubel.vercel.app/#store",
+        "name": "Jembermeubel",
+        "url": "https://jembermeubel.vercel.app/",
+        "image": "https://jembermeubel.vercel.app/assets/img/lemarihias.jpeg",
+        "telephone": "+62-895-3699-69300",
+        "areaServed": "Indonesia",
+        "priceRange": "$$",
+        "parentOrganization": { "@id": "https://jembermeubel.vercel.app/#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://jembermeubel.vercel.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Berapa ongkir pengiriman?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ongkir menyesuaikan kota tujuan dan jenis barang. Kami bantu cek estimasi & opsi ekspedisi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Berapa lama waktu produksi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Umumnya 7–21 hari tergantung model, finishing, dan antrian produksi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bahan apa yang digunakan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bisa jati/mahoni/mindi (menyesuaikan model & budget). Konsultasi dulu biar pas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bisa custom desain & ukuran?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bisa. Kirim ukuran ruang, referensi model, dan warna/finishing yang diinginkan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ada garansi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ada after-sales untuk kendala tertentu (mis. finishing/produksi). Detail bisa disesuaikan kebijakan toko."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="jm-page">
@@ -673,110 +840,151 @@
 
   </main>
 
+  <!-- Floating WhatsApp (fixed) -->
+  <a class="jm-float jm-float--wa"
+     href="https://wa.me/62895369969300?text=Halo%20Jembermeubel,%20saya%20mau%20konsultasi%20furniture."
+     target="_blank" rel="noopener"
+     aria-label="Chat WhatsApp Jembermeubel">
+    <!-- WhatsApp icon (inline SVG) -->
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M19.11 17.41c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.31.2-.58.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.99 2.65 1.12 2.83.14.18 1.95 2.98 4.72 4.18.66.28 1.17.45 1.57.58.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.83-1.27.23-.62.23-1.15.16-1.27-.07-.12-.25-.2-.52-.34z"/>
+      <path fill="currentColor" d="M16 3C8.83 3 3 8.83 3 16c0 2.3.61 4.54 1.77 6.52L3 29l6.65-1.72A12.93 12.93 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3zm0 23.6c-2.03 0-4.02-.54-5.74-1.56l-.41-.24-3.95 1.02 1.05-3.85-.27-.4A10.57 10.57 0 0 1 5.4 16C5.4 10.26 10.26 5.4 16 5.4S26.6 10.26 26.6 16 21.74 26.6 16 26.6z"/>
+    </svg>
+  </a>
+
+  <!-- Floating Up (fixed) -->
+  <button class="jm-float jm-float--up" id="jmFloatUp" type="button" aria-label="Kembali ke atas">
+    <!-- Up icon (inline SVG) -->
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M12 5l7 7-1.41 1.41L13 8.83V20h-2V8.83L6.41 13.41 5 12l7-7z"/>
+    </svg>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-(function(){
-  const form = document.getElementById('jmCtaForm');
-  const waBtn = document.getElementById('jmCtaWa');
-  const copyBtn = document.getElementById('jmCopyFormat');
-  const toast = document.getElementById('jmCtaToast');
+  <script>
+  (function(){
+    const form = document.getElementById('jmCtaForm');
+    const waBtn = document.getElementById('jmCtaWa');
+    const copyBtn = document.getElementById('jmCopyFormat');
+    const toast = document.getElementById('jmCtaToast');
 
-  if(!form || !waBtn) return;
+    if(!form || !waBtn) return;
 
-  function showToast(text){
-    if(!toast) return;
-    toast.textContent = text || 'Pesan siap ✅';
-    toast.classList.add('is-show');
-    clearTimeout(window.__jmCtaToastT);
-    window.__jmCtaToastT = setTimeout(()=> toast.classList.remove('is-show'), 2200);
-  }
-
-  function getVal(name){
-    const el = form.elements[name];
-    return el ? (el.value || '').trim() : '';
-  }
-
-  function buildMessage(){
-    const nama = getVal('nama');
-    const kota = getVal('kota');
-    const produk = getVal('produk');
-    const ukuran = getVal('ukuran');
-    const catatan = getVal('catatan');
-
-    // isi default kalau kosong biar tetap rapi
-    return [
-      `Nama: ${nama || '-'}`,
-      `Kota: ${kota || '-'}`,
-      `Produk: ${produk || '-'}`,
-      `Ukuran/Warna: ${ukuran || '-'}`,
-      `Catatan: ${catatan || '-'}`
-    ].join('\n');
-  }
-
-  function getPhoneFromHref(href){
-    // ex: https://wa.me/62XXXXXXXXXXX
-    const base = (href || '').split('?')[0];
-    return base.replace('https://wa.me/','').trim();
-  }
-
-  function makeWaLink(){
-    const phone = getPhoneFromHref(waBtn.getAttribute('href') || 'https://wa.me/62895369969300');
-    const msg = buildMessage();
-    const full = `Halo Jembermeubel, saya mau konsultasi furniture.\n\n${msg}`;
-    return `https://wa.me/${phone}?text=${encodeURIComponent(full)}`;
-  }
-
-  async function copyToClipboard(text){
-    try{
-      if(navigator.clipboard && window.isSecureContext){
-        await navigator.clipboard.writeText(text);
-        return true;
-      }
-    }catch(e){}
-    // fallback
-    try{
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.setAttribute('readonly','');
-      ta.style.position = 'fixed';
-      ta.style.left = '-9999px';
-      document.body.appendChild(ta);
-      ta.select();
-      const ok = document.execCommand('copy');
-      document.body.removeChild(ta);
-      return ok;
-    }catch(e){
-      return false;
+    function showToast(text){
+      if(!toast) return;
+      toast.textContent = text || 'Pesan siap ✅';
+      toast.classList.add('is-show');
+      clearTimeout(window.__jmCtaToastT);
+      window.__jmCtaToastT = setTimeout(()=> toast.classList.remove('is-show'), 2200);
     }
-  }
 
-  // Saat klik WhatsApp: buat link dari isi form
-  waBtn.addEventListener('click', function(e){
-    const link = makeWaLink();
-    waBtn.setAttribute('href', link);
-    showToast('Pesan siap ✅ Membuka WhatsApp…');
-    // biarkan default membuka tab WA
-  });
+    function getVal(name){
+      const el = form.elements[name];
+      return el ? (el.value || '').trim() : '';
+    }
 
-  // Tombol copy: copy dari isi form
-  if(copyBtn){
-    copyBtn.addEventListener('click', async function(){
+    function buildMessage(){
+      const nama = getVal('nama');
+      const kota = getVal('kota');
+      const produk = getVal('produk');
+      const ukuran = getVal('ukuran');
+      const catatan = getVal('catatan');
+
+      // isi default kalau kosong biar tetap rapi
+      return [
+        `Nama: ${nama || '-'}`,
+        `Kota: ${kota || '-'}`,
+        `Produk: ${produk || '-'}`,
+        `Ukuran/Warna: ${ukuran || '-'}`,
+        `Catatan: ${catatan || '-'}`
+      ].join('\n');
+    }
+
+    function getPhoneFromHref(href){
+      // ex: https://wa.me/62XXXXXXXXXXX
+      const base = (href || '').split('?')[0];
+      return base.replace('https://wa.me/','').trim();
+    }
+
+    function makeWaLink(){
+      const phone = getPhoneFromHref(waBtn.getAttribute('href') || 'https://wa.me/62895369969300');
       const msg = buildMessage();
-      const ok = await copyToClipboard(msg);
-      showToast(ok ? 'Format tersalin ✅' : 'Gagal copy otomatis, copy manual ya.');
+      const full = `Halo Jembermeubel, saya mau konsultasi furniture.\n\n${msg}`;
+      return `https://wa.me/${phone}?text=${encodeURIComponent(full)}`;
+    }
+
+    async function copyToClipboard(text){
+      try{
+        if(navigator.clipboard && window.isSecureContext){
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+      }catch(e){}
+      // fallback
+      try{
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly','');
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        const ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+        return ok;
+      }catch(e){
+        return false;
+      }
+    }
+
+    // Saat klik WhatsApp: buat link dari isi form
+    waBtn.addEventListener('click', function(e){
+      const link = makeWaLink();
+      waBtn.setAttribute('href', link);
+      showToast('Pesan siap ✅ Membuka WhatsApp…');
+      // biarkan default membuka tab WA
     });
-  }
 
-  // Optional: update href WA realtime setiap input berubah (lebih smooth)
-  form.addEventListener('input', function(){
-    waBtn.setAttribute('href', makeWaLink());
-  });
+    // Tombol copy: copy dari isi form
+    if(copyBtn){
+      copyBtn.addEventListener('click', async function(){
+        const msg = buildMessage();
+        const ok = await copyToClipboard(msg);
+        showToast(ok ? 'Format tersalin ✅' : 'Gagal copy otomatis, copy manual ya.');
+      });
+    }
 
-})();
-</script>
+    // Optional: update href WA realtime setiap input berubah (lebih smooth)
+    form.addEventListener('input', function(){
+      waBtn.setAttribute('href', makeWaLink());
+    });
 
+  })();
+  </script>
+
+  <!-- Floating Up behavior -->
+  <script>
+    (function(){
+      const upBtn = document.getElementById('jmFloatUp');
+      if(!upBtn) return;
+
+      function onScroll(){
+        if(window.scrollY > 400){
+          upBtn.classList.add('is-show');
+        }else{
+          upBtn.classList.remove('is-show');
+        }
+      }
+
+      upBtn.addEventListener('click', function(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
 
 <!-- FOOTER -->
 <footer class="jm-footer mt-4 mt-lg-5">
@@ -870,7 +1078,6 @@
   // Tahun otomatis
   document.getElementById("jmYear").textContent = new Date().getFullYear();
 </script>
-
 
 </body>
 </html>
